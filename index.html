@@ -1326,14 +1326,13 @@
     </div>
     <div data-reveal style="max-width:420px;margin:0 auto;position:relative;">
       <video class="bl-reel-video" id="bl-reel-video-brow" autoplay muted loop playsinline preload="metadata">
-        
+        <source src="/assets/brow-lift-reel.mp4" type="video/mp4">
       </video>
       <button class="bl-sound-toggle" id="bl-sound-toggle-brow" aria-label="Unmute video">
         <svg class="bl-sound-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M23 9l-6 6M17 9l6 6"/></svg>
         <svg class="bl-sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/></svg>
       </button>
     </div>
-    <p style="opacity:.5;font-size:14px;margin-top:8px;" data-reveal>Video coming soon</p>
 
     <!-- Brow Lamination FAQ -->
     <div class="bl-faq" style="max-width:800px;margin:40px auto 0;" data-reveal>
@@ -1807,6 +1806,19 @@
         offIcon2.style.display = video2.muted ? '' : 'none';
         onIcon2.style.display = video2.muted ? 'none' : '';
         btn2.setAttribute('aria-label', video2.muted ? 'Unmute video' : 'Mute video');
+      });
+    }
+    // Brow reel
+    var video3 = document.getElementById('bl-reel-video-brow');
+    var btn3 = document.getElementById('bl-sound-toggle-brow');
+    var offIcon3 = btn3 && btn3.querySelector('.bl-sound-off');
+    var onIcon3 = btn3 && btn3.querySelector('.bl-sound-on');
+    if (video3 && btn3) {
+      btn3.addEventListener('click', function(){
+        video3.muted = !video3.muted;
+        offIcon3.style.display = video3.muted ? '' : 'none';
+        onIcon3.style.display = video3.muted ? 'none' : '';
+        btn3.setAttribute('aria-label', video3.muted ? 'Unmute video' : 'Mute video');
       });
     }
   })();
