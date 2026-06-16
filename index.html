@@ -4,23 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
+
+  <!-- Smart language redirect -->
   <script>
-  (function(){
-    var lang = (navigator.language || navigator.userLanguage || '').toLowerCase().slice(0,2);
-    var path = window.location.pathname;
-    if(path.indexOf('/ru/')===0 || path.indexOf('/ar/')===0) return;
-    var force = localStorage.getItem('bl_lang');
-    if(force==='ru'){window.location.replace('/ru/');return;}
-    if(force==='ar'){window.location.replace('/ar/');return;}
-    if(lang==='ru'){window.location.replace('/ru/');}
-    else if(lang==='ar'){window.location.replace('/ar/');}
-  })();
+    (function() {
+      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase().slice(0, 2);
+      var path = window.location.pathname;
+      // Don't redirect if already on a language subdirectory
+      if (path.indexOf('/ru/') === 0 || path.indexOf('/ar/') === 0) return;
+      // Check localStorage override
+      var force = localStorage.getItem('bl_lang');
+      if (force === 'ru') { window.location.replace('/ru/'); return; }
+      if (force === 'ar') { window.location.replace('/ar/'); return; }
+      // Auto-detect
+      if (lang === 'ru') { window.location.replace('/ru/'); }
+      else if (lang === 'ar') { window.location.replace('/ar/'); }
+    })();
   </script>
-  <title>Brow & Lash Lamination / Lift Dubai | Brows & Lips UAE</title>
-  <meta name="description" content="Professional brow lamination and lash lamination / lift in Dubai. Natural-looking results. Book your free consultation at Brows & Lips UAE.">
-  <meta name="keywords" content="brow lamination Dubai, lash lift Dubai, brow lift Dubai, lash lamination UAE, eyebrow lamination Dubai, eyelash lift Dubai, Brows and Lips">
-  <meta property="og:title" content="Brow & Lash Lamination / Lift Dubai | Brows & Lips UAE">
-  <meta property="og:description" content="Professional brow lamination and lash lamination / lift in Dubai. Natural-looking results. Book your free consultation at Brows & Lips UAE.">
+
+  <title>Microblading & Powder Brows Dubai | Brows &amp; Lips UAE</title>
+  <meta name="description" content="Premium microblading, powder brows, ombre brows, and nanoblading in Dubai. Expert brow artists. Natural, lasting results. Book your free consultation today.">
+  <meta name="keywords" content="microblading Dubai, powder brows UAE, ombre brows Dubai, nanoblading Dubai, brow tattoo Dubai, permanent eyebrows Dubai, eyebrow microblading Dubai">
+<meta property="og:title" content="Microblading &amp; Powder Brows Dubai | Brows &amp; Lips UAE">
+  <meta property="og:description" content="Premium permanent eyebrow makeup in Dubai. Microblading, powder brows, ombre brows, nanoblading. Book free consult.">
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://promolift.browsandlips.ae/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +38,8 @@
 @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 400; font-stretch: normal; font-display: swap; src: url(https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbWmT.ttf) format('truetype'); }
 @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 500; font-stretch: normal; font-display: swap; src: url(https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWub2bWmT.ttf) format('truetype'); }
 @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 700; font-stretch: normal; font-display: swap; src: url(https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuYjammT.ttf) format('truetype'); }
-  </style>
+</style>
+
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KFQSYDQ0TR"></script>
   <script>
@@ -40,283 +47,1025 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-KFQSYDQ0TR');
-    gtag('config', 'G-SZ1E0EJ9JR');
     gtag('config', 'AW-11239081926');
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11239081926"></script>
+
   <!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109687630', 'ym');
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109687630', 'ym');
+
     ym(109687630, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/109687630" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/109687630" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+
   <!-- Meta Pixel - Promo Lips -->
   <script>
-  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '398652465662332');
   fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=398652465662332&ev=PageView&noscript=1" /></noscript>
-  <!-- Tracking -->
+
+  <!-- Source detection + unified tracking -->
   <script>
-(function(){try{var p=new URLSearchParams(window.location.search);var src='other';if(p.has('gclid')||p.get('utm_source')==='google')src='google_ads';else if(p.has('fbclid')||p.get('utm_source')==='facebook'||p.get('utm_source')==='meta'||p.get('utm_source')==='fb')src='meta_ads';sessionStorage.setItem('traffic_source',src);}catch(e){}
-function track(n,p){p=p||{};try{var s=sessionStorage.getItem('traffic_source')||'other';}catch(e){}gtag('event',n,p);try{if(typeof fbq!=='undefined'){if(n==='form_submit'||n==='book_click')fbq('trackCustom','book_click',p);else if(n.indexOf('whatsapp')!==-1)fbq('trackCustom','whatsapp_click',p);else if(n.indexOf('phone')!==-1||n.indexOf('call')!==-1)fbq('trackCustom','phone_click',p);else fbq('trackCustom',n,p);}}catch(e){}try{if(typeof ym!=='undefined'){if(n.indexOf('whatsapp')!==-1||n==='whatsapp_click')ym(109687630,'reachGoal','whatsapp_click');else if(n.indexOf('phone')!==-1||n.indexOf('call')!==-1)ym(109687630,'reachGoal','phone_click');else if(n==='book_click'||n==='form_submit')ym(109687630,'reachGoal','book_click');}}catch(e){}}
-document.addEventListener('DOMContentLoaded',function(){var tracked={};document.body.addEventListener('click',function(e){var el=e.target.closest('a, button, [role="button"]');if(!el)return;var key=el.className+'::'+el.getAttribute('href')+'::'+(el.textContent||'').trim();var now=Date.now();if(tracked[key]&&now-tracked[key]<300)return;tracked[key]=now;var href=(el.getAttribute('href')||'').toLowerCase();var cls=el.className||'';
-if(href.indexOf('tel:')===0)track('phone_click',{'event_category':'engagement','event_label':'phone_call'});else if(href.indexOf('wa.me')>=0||href.indexOf('whatsapp')>=0||href.indexOf('wahelp')>=0||cls.indexOf('sticky-wa')>=0||cls.indexOf('bl-sticky-wa')>=0)track('whatsapp_click',{'event_category':'engagement','event_label':'whatsapp'});else if(cls.indexOf('ms_booking')>=0||cls.indexOf('sticky-book')>=0||cls.indexOf('bl-sticky-book')>=0||cls.indexOf('booking-btn')>=0||href.indexOf('#booking')>=0)track('book_click',{'event_category':'conversion','event_label':'booking'});else if(href.indexOf('alteg.io')>=0)track('book_click',{'event_category':'conversion','event_label':'booking'});});});})();
+    (function() {
+      try {
+        var p = new URLSearchParams(window.location.search);
+        var src = 'other';
+        if (p.has('gclid') || p.get('utm_source') === 'google') src = 'google_ads';
+        else if (p.has('fbclid') || p.get('utm_source') === 'facebook' || p.get('utm_source') === 'meta' || p.get('utm_source') === 'fb') src = 'meta_ads';
+        sessionStorage.setItem('traffic_source', src);
+      } catch(e) {}
+
+      function track(ga4Name, params) {
+        params = params || {};
+        var source = 'other';
+        try { source = sessionStorage.getItem('traffic_source') || 'other'; } catch(e) {}
+        if (source !== 'meta_ads') {
+          gtag('event', ga4Name, params);
+        }
+        if (source === 'meta_ads') {
+          try {
+            if (typeof fbq !== 'undefined') {
+              if (ga4Name === 'form_submit' || ga4Name === 'book_click') {
+                fbq('trackCustom', 'book_click', params);
+              } else if (ga4Name.indexOf('whatsapp') !== -1) {
+                fbq('trackCustom', 'whatsapp_click', params);
+              } else if (ga4Name.indexOf('phone') !== -1 || ga4Name.indexOf('call') !== -1) {
+                fbq('trackCustom', 'phone_click', params);
+              } else {
+                fbq('trackCustom', ga4Name, params);
+              }
+            }
+          } catch(e) {}
+        }
+        // Yandex.Metrica reachGoal
+        try {
+          if (typeof ym !== 'undefined') {
+            if (ga4Name.indexOf('whatsapp') !== -1 || ga4Name === 'whatsapp_click') {
+              ym(109687630, 'reachGoal', 'whatsapp_click');
+            } else if (ga4Name.indexOf('phone') !== -1 || ga4Name.indexOf('call') !== -1) {
+              ym(109687630, 'reachGoal', 'phone_click');
+            } else if (ga4Name === 'book_click' || ga4Name === 'form_submit') {
+              ym(109687630, 'reachGoal', 'book_click');
+            }
+          }
+        } catch(e) {}
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        // Single click delegation - prevents double/triple firing
+        var tracked = {};
+        document.body.addEventListener('click', function(e) {
+          var el = e.target.closest('a, button, [role="button"]');
+          if (!el) return;
+
+          // Dedup: same element within 300ms = same event
+          var key = el.className + '::' + el.getAttribute('href') + '::' + (el.textContent || '').trim();
+          var now = Date.now();
+          if (tracked[key] && now - tracked[key] < 300) return;
+          tracked[key] = now;
+
+          var href = (el.getAttribute('href') || '').toLowerCase();
+          var cls = el.className || '';
+
+          if (href.indexOf('tel:') === 0) {
+            track('phone_click', {'event_category': 'engagement', 'event_label': 'phone_call'});
+          } else if (href.indexOf('wa.me') >= 0 || href.indexOf('whatsapp') >= 0 || href.indexOf('wahelp') >= 0 || cls.indexOf('sticky-wa') >= 0 || cls.indexOf('bl-sticky-wa') >= 0) {
+            track('whatsapp_click', {'event_category': 'engagement', 'event_label': 'whatsapp'});
+          } else if (cls.indexOf('ms_booking') >= 0 || cls.indexOf('sticky-book') >= 0 || cls.indexOf('bl-sticky-book') >= 0 || cls.indexOf('booking-btn') >= 0 || href.indexOf('#booking') >= 0) {
+            track('book_click', {'event_category': 'conversion', 'event_label': 'booking'});
+          } else if (href.indexOf('alteg.io') >= 0) {
+            track('book_click', {'event_category': 'conversion', 'event_label': 'booking'});
+          }
+        });
+      });
+    })();
   </script>
+
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BeautySalon","name":"Brows & Lips UAE","description":"Premium brow lamination and lash lamination / lift services in Dubai.","url":"https://promolift.browsandlips.ae","telephone":"+971-58-590-2690","address":{"@type":"PostalAddress","addressCountry":"AE","addressRegion":"Dubai"},"openingHours":"Mo-Sa 10:00-20:00","priceRange":"AED 180-350","sameAs":["https://www.instagram.com/browsandlips.ae"]}
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Brows & Lips UAE",
+    "description": "Premium permanent eyebrow makeup studio in Dubai specializing in microblading, powder brows, ombre brows, and nanoblading.",
+    "url": "https://promo.browsandlips.ae",
+    "telephone": "+971-58-590-2690",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "AE",
+      "addressRegion": "Dubai"
+    },
+    "openingHours": "Mo-Sa 10:00-20:00",
+    "priceRange": "AED 1,500–3,000",
+    "sameAs": ["https://www.instagram.com/browsandlips.ae"]
+  }
   </script>
-</head>
 
   <style>
-    :root {
-      --bl-blush: #d9c0b4; --bl-blush-soft: #e3cdc2; --bl-blush-deep: #c9a594; --bl-blush-100: #f3e6df;
-      --bl-cream: #f8f3ef; --bl-cream-2: #efe7df; --bl-paper: #faf6f2; --bl-white: #fff;
-      --bl-ink: #2a201b; --bl-ink-soft: #4d3f37; --bl-ink-mute: #6b5d55; --bl-line: #e6dcd3;
-      --bl-gold: #b89568; --bl-rose: #c97f7a;
-      --bl-bg: var(--bl-cream); --bl-fg: var(--bl-ink); --bl-fg-soft: var(--bl-ink-soft); --bl-fg-mute: var(--bl-ink-mute);
-      --bl-accent: var(--bl-blush); --bl-accent-deep: var(--bl-blush-deep); --bl-border: var(--bl-line);
-      --bl-font-display: "Anton", "Oswald", "Bebas Neue", Impact, sans-serif;
-      --bl-font-body: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
-      --bl-w-thin: 200; --bl-w-regular: 400; --bl-w-medium: 500; --bl-w-bold: 700;
-      --bl-fs-hero: clamp(56px, 9vw, 140px); --bl-fs-h1: clamp(40px, 6vw, 88px);
-      --bl-fs-h2: clamp(32px, 4.5vw, 60px); --bl-fs-h3: clamp(22px, 2.4vw, 32px);
-      --bl-fs-body: 16px; --bl-fs-small: 14px; --bl-fs-eyebrow: 13px;
-      --bl-lh-display: .95; --bl-lh-heading: 1.1; --bl-lh-body: 1.7;
-      --bl-ls-eyebrow: .18em; --bl-ls-button: .22em;
-      --bl-container: 1240px; --bl-gutter: clamp(20px, 4vw, 64px);
-      --bl-section-y: clamp(72px, 10vw, 140px); --bl-header-h: 76px;
-      --bl-shadow-card: 0 18px 50px -22px rgba(60, 36, 24, .28);
-      --bl-ease: cubic-bezier(.22, .61, .36, 1);
-      --bl-dur-fast: 180ms; --bl-dur-base: 420ms; --bl-dur-slow: 900ms;
-    }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-    html{scroll-behavior:smooth;}
-    body{font-family:var(--bl-font-body);font-weight:var(--bl-w-thin);font-size:var(--bl-fs-body);line-height:var(--bl-lh-body);color:var(--bl-fg);background:var(--bl-white);overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
-    img{max-width:100%;display:block;}a{color:inherit;text-decoration:none;}
-    ::selection{background:var(--bl-blush);color:var(--bl-ink);}
-    [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity 1s var(--bl-ease),transform 1s var(--bl-ease);}
-    [data-reveal].is-in{opacity:1;transform:none;}
-    .bl-h1{font-family:var(--bl-font-display);font-size:var(--bl-fs-h1);line-height:var(--bl-lh-heading);text-transform:uppercase;letter-spacing:.01em;color:var(--bl-fg);margin:0;}
-    .bl-h2{font-family:var(--bl-font-display);font-size:var(--bl-fs-h2);line-height:var(--bl-lh-heading);text-transform:uppercase;letter-spacing:.01em;margin:0;}
-    .bl-h3{font-family:var(--bl-font-display);font-size:var(--bl-fs-h3);line-height:1.2;text-transform:uppercase;letter-spacing:.04em;margin:0;}
-    .bl-eyebrow{font-family:var(--bl-font-body);font-weight:var(--bl-w-medium);font-size:var(--bl-fs-eyebrow);letter-spacing:var(--bl-ls-eyebrow);text-transform:uppercase;color:var(--bl-accent-deep);}
-    .bl-body{font-family:var(--bl-font-body);font-weight:var(--bl-w-thin);font-size:var(--bl-fs-body);line-height:var(--bl-lh-body);color:var(--bl-fg-soft);margin:0 0 1em 0;text-wrap:pretty;}
-    .bl-section-num{font-family:var(--bl-font-display);font-size:clamp(120px,18vw,200px);line-height:.8;color:var(--bl-blush);opacity:.55;letter-spacing:-.04em;user-select:none;}
-    .bl-link{display:inline-flex;align-items:center;gap:10px;font-family:var(--bl-font-body);font-weight:var(--bl-w-medium);font-size:13px;letter-spacing:var(--bl-ls-button);text-transform:uppercase;color:var(--bl-fg);transition:color var(--bl-dur-fast) var(--bl-ease),gap var(--bl-dur-base) var(--bl-ease);}
-    .bl-link:hover{color:var(--bl-accent-deep);gap:18px;}.bl-link .arrow{transition:transform var(--bl-dur-base) var(--bl-ease);}.bl-link:hover .arrow{transform:translateX(4px);}
-    .bl-container{max-width:var(--bl-container);margin:0 auto;padding-inline:var(--bl-gutter);}
-    .bl-section{padding-block:var(--bl-section-y);}
-    .bl-btn{--pad-y:18px;--pad-x:36px;display:inline-flex;align-items:center;gap:14px;padding:var(--pad-y) var(--pad-x);font-family:var(--bl-font-body);font-weight:var(--bl-w-medium);font-size:13px;letter-spacing:var(--bl-ls-button);text-transform:uppercase;white-space:nowrap;border:1px solid var(--bl-ink);background:transparent;color:var(--bl-ink);cursor:pointer;transition:background var(--bl-dur-base) var(--bl-ease),color var(--bl-dur-base) var(--bl-ease),transform var(--bl-dur-fast) var(--bl-ease),border-color var(--bl-dur-base) var(--bl-ease);}
-    .bl-btn:hover{background:var(--bl-ink);color:var(--bl-cream);}.bl-btn:active{transform:translateY(1px);}
-    .bl-btn--primary{background:var(--bl-ink);color:var(--bl-cream);}.bl-btn--primary:hover{background:var(--bl-blush-deep);border-color:var(--bl-blush-deep);}
-    .bl-btn--blush{background:var(--bl-blush);color:var(--bl-ink);border-color:var(--bl-blush);}.bl-btn--blush:hover{background:var(--bl-blush-deep);border-color:var(--bl-blush-deep);color:var(--bl-cream);}
-    .bl-btn--ghost{background:transparent;color:var(--bl-cream);border-color:var(--bl-cream);}.bl-btn--ghost:hover{background:var(--bl-cream);color:var(--bl-ink);}
-    .bl-btn .arrow{transition:transform var(--bl-dur-base) var(--bl-ease);display:inline-block;}.bl-btn:hover .arrow{transform:translateX(6px);}
-    .bl-coin{position:relative;width:130px;height:130px;border-radius:50%;background:var(--bl-blush);color:var(--bl-ink);display:inline-flex;align-items:center;justify-content:center;font-family:var(--bl-font-display);letter-spacing:.18em;text-transform:uppercase;font-size:14px;font-weight:700;cursor:pointer;animation:bl-pulse 3s var(--bl-ease) infinite;transition:transform var(--bl-dur-base) var(--bl-ease),background var(--bl-dur-base) var(--bl-ease);}
-    .bl-coin:hover{transform:scale(1.06) rotate(8deg);background:var(--bl-blush-deep);color:var(--bl-cream);}
-    @keyframes bl-pulse{0%,100%{box-shadow:0 0 0 0 rgba(217,192,180,.6);}50%{box-shadow:0 0 0 22px rgba(217,192,180,0);}}
-    .bl-header{position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(248,243,239,.92);-webkit-backdrop-filter:blur(10px) saturate(120%);backdrop-filter:blur(10px) saturate(120%);border-bottom:1px solid var(--bl-line);transition:transform .42s var(--bl-ease),background .42s var(--bl-ease),box-shadow .42s var(--bl-ease);}
-    .bl-header--hidden{transform:translateY(-100%);}
-    .bl-header__inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:18px;max-width:var(--bl-container);margin:0 auto;padding-inline:var(--bl-gutter);}
-    .bl-header__logo{display:flex;align-items:center;gap:10px;margin-top:-3px;}.bl-header__logo img{height:30px;width:auto;max-width:140px;}
-    .bl-header__logo .bl-logo-text{font-family:var(--bl-font-display);font-size:24px;letter-spacing:.04em;text-transform:uppercase;color:var(--bl-ink);}
-    .bl-header__logo .bl-logo-text em{font-style:normal;color:var(--bl-blush-deep);}
-    .bl-nav{display:flex;gap:24px;align-items:center;}
-    .bl-nav__link{font-family:var(--bl-font-body);font-weight:var(--bl-w-regular);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--bl-fg);position:relative;padding:6px 0;transition:color var(--bl-dur-fast) var(--bl-ease);}
-    .bl-nav__link::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left center;transition:transform var(--bl-dur-base) var(--bl-ease);}
-    .bl-nav__link:hover{color:var(--bl-accent-deep);}.bl-nav__link:hover::after{transform:scaleX(1);}
-    .bl-header__cta{display:flex;gap:12px;align-items:center;}.bl-header__cta .bl-btn{--pad-y:10px;--pad-x:20px;gap:8px;font-size:11px;}
-    .bl-icon-btn{width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;background:var(--bl-blush-100);color:var(--bl-ink);border:none;cursor:pointer;transition:background var(--bl-dur-fast) var(--bl-ease),transform var(--bl-dur-fast) var(--bl-ease);}
-    .bl-icon-btn:hover{background:var(--bl-blush);transform:translateY(-1px);}.bl-icon-btn svg{width:18px;height:18px;}
-    .bl-burger{display:none;width:36px;height:36px;background:none;border:0;cursor:pointer;touch-action:manipulation;position:relative;z-index:60;}
-    .bl-burger span{display:block;width:22px;height:1.5px;background:var(--bl-ink);margin:5px auto;transition:transform .3s ease,opacity .3s ease;}
-    .bl-burger.is-active span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
-    .bl-burger.is-active span:nth-child(2){opacity:0;}
-    .bl-burger.is-active span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
-    .bl-overlay{display:none;}.bl-nav-close{display:none;}
-    .bl-hero-section{position:relative;width:100%;height:100vh;min-height:580px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--bl-ink);padding-top:var(--bl-header-h);}
-    .bl-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.45;pointer-events:none;}
-    .bl-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.55) 100%);}
-    .bl-hero-content{position:relative;z-index:2;text-align:center;max-width:900px;padding:0 var(--bl-gutter);}
-    .bl-hero-content .bl-eyebrow{display:inline-block;color:var(--bl-blush);margin-bottom:20px;font-size:14px;letter-spacing:.3em;}
-    .bl-hero-content .bl-hero-title{font-family:var(--bl-font-display);font-size:clamp(2.8rem,8vw,6rem);color:var(--bl-blush);line-height:var(--bl-lh-display);text-transform:uppercase;letter-spacing:.03em;margin-bottom:20px;text-shadow:0 2px 30px rgba(0,0,0,0.5);}
-    .bl-hero-content .bl-hero-sub{font-weight:300;font-size:clamp(1rem,2vw,1.3rem);color:rgba(255,255,255,0.9);margin-bottom:36px;line-height:1.7;}
-    .bl-hero-actions{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;}
-    .bl-hero-actions .bl-btn{font-size:14px;--pad-x:40px;--pad-y:18px;}
-    .bl-hero-trust{margin-top:36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
-    .bl-hero-trust span{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,0.65);border:1px solid rgba(217,192,180,0.3);padding:6px 14px;}
-    .bl-banner{background:var(--bl-blush);}.bl-marquee{overflow:hidden;padding:24px 0;}
-    .bl-marquee__track{display:inline-flex;align-items:center;gap:0;white-space:nowrap;animation:bl-marquee 80s linear infinite;font-family:var(--bl-font-display);font-weight:700;font-size:clamp(24px,3vw,40px);color:#fff;text-transform:uppercase;letter-spacing:.02em;}
-    .bl-marquee__sep{color:#fff;margin:0 36px;font-size:.6em;opacity:.5;}
-    @keyframes bl-marquee{to{transform:translateX(-50%);}}
-    .bl-services{background:var(--bl-cream);}.bl-services .bl-container{display:grid;gap:48px;}
-    .bl-services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
-    @media(max-width:800px){.bl-services-grid{grid-template-columns:1fr;}}
-    .bl-service-card{background:var(--bl-white);overflow:hidden;display:flex;flex-direction:column;transition:transform var(--bl-dur-base) var(--bl-ease),box-shadow var(--bl-dur-base) var(--bl-ease);}
-    .bl-service-card:hover{transform:translateY(-6px);box-shadow:var(--bl-shadow-card);}
-    .bl-service-card__img{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--bl-cream-2);}
-    .bl-service-card__img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform var(--bl-dur-slow) var(--bl-ease);}
-    .bl-service-card:hover .bl-service-card__img img{transform:scale(1.05);}
-    .bl-service-card__body{padding:32px 28px 36px;display:flex;flex-direction:column;gap:12px;flex:1;}
-    .bl-service-card__body h3{font-family:var(--bl-font-display);font-size:1.6rem;text-transform:uppercase;letter-spacing:.04em;}
-    .bl-service-card__body p{font-weight:300;font-size:1rem;color:var(--bl-fg-soft);line-height:1.7;margin:0;flex:1;}
-    .bl-service-price{font-size:.85rem;letter-spacing:.1em;color:var(--bl-accent-deep);font-weight:var(--bl-w-medium);}
-    .bl-service-card .bl-btn{align-self:flex-start;--pad-y:14px;--pad-x:28px;font-size:12px;margin-top:auto;}
-    .bl-numblock{display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,80px);align-items:start;}
-    .bl-numblock__body{max-width:56ch;}
-    .bl-gallery{overflow:hidden;background:var(--bl-ink);color:var(--bl-cream);}
-    .bl-gallery .bl-h2{color:var(--bl-cream);margin-bottom:24px;}
-    .bl-gallery .bl-body{color:var(--bl-blush-100);}
-    .bl-gallery .bl-section-num{color:var(--bl-blush);opacity:.4;}
-    .bl-gallery .bl-eyebrow{color:var(--bl-blush);display:block;margin-bottom:14px;}
-    .bl-masonry{display:flex;gap:6px;align-items:flex-start;margin-top:40px;}
-    .bl-masonry-col{flex:1;display:flex;flex-direction:column;gap:6px;}
-    .bl-masonry-item{position:relative;overflow:hidden;cursor:pointer;min-height:200px;display:flex;align-items:center;justify-content:center;background:var(--bl-ink-soft);}
-    .bl-masonry-item img{width:100%;display:block;transition:transform var(--bl-dur-slow) var(--bl-ease);}
-    .bl-masonry-item:hover img{transform:scale(1.04);}
-    .bl-reel-video{width:100%;aspect-ratio:9/16;max-height:70vh;object-fit:cover;border-radius:12px;background:#000;box-shadow:0 4px 20px rgba(0,0,0,0.15);}
-    .bl-sound-toggle{position:absolute;bottom:16px;right:12px;z-index:5;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.55);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.85);transition:background 0.2s;backdrop-filter:blur(4px);}
-    .bl-sound-toggle:hover{background:rgba(0,0,0,0.75);}.bl-sound-toggle svg{width:18px;height:18px;}
-    .bl-review{background:var(--bl-paper);border:1px solid var(--bl-line);padding:28px;display:flex;flex-direction:column;gap:12px;border-radius:2px;transition:transform var(--bl-dur-base) var(--bl-ease),box-shadow var(--bl-dur-base) var(--bl-ease);}
+    /* ============================================================
+       Review cards (from main site design system)
+       ============================================================ */
+    .bl-review{background:var(--bl-paper);border:1px solid var(--bl-line);padding:28px;
+      display:flex;flex-direction:column;gap:12px;border-radius:2px;
+      transition:transform var(--bl-dur-base) var(--bl-ease),box-shadow var(--bl-dur-base) var(--bl-ease);}
     .bl-review:hover{transform:translateY(-4px);box-shadow:var(--bl-shadow-card);}
     .bl-review__stars{color:var(--bl-blush-deep);font-size:15px;letter-spacing:.1em;flex-shrink:0;}
     .bl-review__text{font-size:14px;line-height:1.7;font-weight:200;color:var(--bl-fg-soft);margin:0;flex:1 1 auto;overflow:hidden;}
     .bl-review__author{display:flex;align-items:center;gap:12px;margin-top:auto;padding-top:12px;flex-shrink:0;}
     .bl-review__author strong{font-size:13px;font-weight:500;color:var(--bl-fg);}
     .bl-review__author small{display:block;font-size:11px;color:var(--bl-fg-mute);font-weight:200;}
-    .bl-avatar{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:500;color:#fff;font-family:var(--bl-font-body);}
+    .bl-avatar{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:500;
+      color:#fff;font-family:var(--bl-font-body);}
     .bl-reviews-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
-    @media(max-width:700px){.bl-reviews-grid{grid-template-columns:1fr;}}
-    .bl-benefits-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px;}
-    @media(max-width:700px){.bl-benefits-grid{grid-template-columns:1fr 1fr;}}
-    @media(max-width:480px){.bl-benefits-grid{grid-template-columns:1fr;}}
-    .bl-benefit-card{background:var(--bl-paper);border:1px solid var(--bl-line);padding:32px 24px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px;transition:transform var(--bl-dur-base) var(--bl-ease),box-shadow var(--bl-dur-base) var(--bl-ease);}
-    .bl-benefit-card:hover{transform:translateY(-4px);box-shadow:var(--bl-shadow-card);}
-    .bl-benefit-card__icon{width:60px;height:60px;border-radius:50%;background:var(--bl-blush);display:flex;align-items:center;justify-content:center;color:var(--bl-ink);flex-shrink:0;}
-    .bl-benefit-card__icon svg{width:26px;height:26px;}
-    .bl-benefit-card__title{font-family:var(--bl-font-display);font-size:clamp(16px,1.4vw,22px);text-transform:uppercase;letter-spacing:.04em;line-height:1.2;}
-    .bl-benefit-card__sub{font-size:13px;color:var(--bl-fg-mute);margin:0;}
+    @media (max-width: 700px){.bl-reviews-grid{grid-template-columns:1fr;}}
     .bl-rating-summary{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap;}
     .bl-rating-summary__stars{color:var(--bl-blush-deep);letter-spacing:.1em;font-size:15px;}
     .bl-rating-summary strong{font-weight:500;font-size:14px;}
+
+    /* Review carousel */
     .bl-reviews-carousel{position:relative;margin-top:40px;}
-    .bl-faq{max-width:760px;margin:40px auto 0;text-align:left;}
-    .bl-faq-item{border-bottom:1px solid var(--bl-line);}
-    .bl-faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;font-family:var(--bl-font-body);font-weight:var(--bl-w-medium);font-size:15px;color:var(--bl-fg);background:none;border:none;cursor:pointer;text-align:left;transition:color var(--bl-dur-fast) var(--bl-ease);}
-    .bl-faq-q:hover{color:var(--bl-accent-deep);}
-    .bl-faq-q .bl-faq-icon{flex-shrink:0;font-size:18px;transition:transform var(--bl-dur-base) var(--bl-ease);color:var(--bl-accent-deep);}
-    .bl-faq-item.is-open .bl-faq-q .bl-faq-icon{transform:rotate(45deg);}
-    .bl-faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.4s ease;}
-    .bl-faq-a-inner{padding:0 0 20px;font-weight:300;font-size:14px;line-height:1.8;color:var(--bl-fg-soft);}
-    .bl-booking{background:var(--bl-cream);}
-    .bl-booking-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:40px;}
-    @media(max-width:700px){.bl-booking-grid{grid-template-columns:1fr;gap:32px;}}
-    .bl-contact-list{display:flex;flex-direction:column;gap:12px;}
-    .bl-contact-item{display:flex;align-items:center;gap:16px;padding:16px 20px;border:1px solid var(--bl-line);background:var(--bl-paper);transition:transform var(--bl-dur-fast) var(--bl-ease),box-shadow var(--bl-dur-fast) var(--bl-ease);cursor:pointer;color:var(--bl-fg);}
-    .bl-contact-item:hover{transform:translateY(-3px);box-shadow:var(--bl-shadow-card);}
-    .bl-contact-icon{width:44px;height:44px;border-radius:50%;background:var(--bl-blush);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-    .bl-contact-icon svg{width:20px;height:20px;color:var(--bl-ink);}
-    .bl-contact-label{font-weight:var(--bl-w-medium);font-size:14px;letter-spacing:.08em;text-transform:uppercase;}
-    .bl-map-wrap{overflow:hidden;border-radius:2px;border:1px solid var(--bl-line);}
-    .bl-map-wrap iframe{width:100%;height:320px;border:0;display:block;}
-    .bl-cta-final{background:var(--bl-ink);color:var(--bl-cream);text-align:center;padding:clamp(80px,12vw,140px) 0;}
-    .bl-cta-final .bl-eyebrow{display:block;margin-bottom:20px;color:var(--bl-blush);}
-    .bl-cta-final .bl-h1{color:var(--bl-cream);margin-bottom:36px;}
-    .bl-footer{background:var(--bl-cream-2);color:var(--bl-fg);padding-block:40px;}
-    .bl-footer .bl-container{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:.83rem;font-weight:300;}
-    .bl-footer a{color:var(--bl-fg-soft);transition:color var(--bl-dur-fast) var(--bl-ease);}
-    .bl-footer a:hover{color:var(--bl-accent-deep);}.bl-footer span{color:var(--bl-fg-mute);}
-    .bl-floating-wa{position:fixed;bottom:24px;right:24px;z-index:999;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.18);transition:transform .2s ease,box-shadow .2s ease;}
-    .bl-floating-wa:hover{transform:scale(1.08);box-shadow:0 6px 24px rgba(0,0,0,.22);}.bl-floating-wa svg{width:28px;height:28px;fill:#fff;}
-    .bl-sticky{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9998;background:var(--bl-cream-2);border-top:1px solid var(--bl-line);padding:10px 16px;padding-bottom:env(safe-area-inset-bottom,10px);}
-    .bl-sticky-inner{display:flex;gap:10px;}
-    .bl-sticky a{flex:1;display:flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:2px;font-size:12px;letter-spacing:var(--bl-ls-button);text-transform:uppercase;font-weight:var(--bl-w-medium);transition:opacity .2s;}
-    .bl-sticky a:active{opacity:.7;}.bl-sticky-book{background:var(--bl-ink);color:var(--bl-cream) !important;}
-    .bl-sticky-wa{background:#25d366;color:#fff !important;gap:6px;}.bl-sticky-wa svg{width:18px;height:18px;fill:currentColor;}
-    @media(max-width:700px){
-      .bl-nav{display:none;}.bl-burger{display:block;}
-      .bl-header__inner .bl-icon-btn:not(:last-of-type){display:none;}
-      .bl-mobile-nav{position:fixed;inset:0;z-index:10000;background:var(--bl-cream);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;transform:translateX(100%);transition:transform var(--bl-dur-base) var(--bl-ease);}
-      .bl-mobile-nav.open{transform:translateX(0);}.bl-mobile-nav .bl-nav__link{font-size:18px;padding:16px;}
-      .bl-nav-close{display:block;position:absolute;top:20px;right:20px;background:none;border:none;font-size:28px;cursor:pointer;color:var(--bl-ink);z-index:10001;}
-      .bl-overlay{display:block;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:opacity var(--bl-dur-base) var(--bl-ease);}
-      .bl-overlay.open{opacity:1;pointer-events:auto;}
-      .bl-hero-trust span{font-size:10px;padding:5px 10px;}
-      .bl-footer .bl-container{flex-direction:column;text-align:center;}
-      .bl-footer{padding-bottom:80px;}.bl-sticky{display:block;}
+
+    /* Reel video - portrait aspect ratio */
+    .bl-reel-video {
+      width: 100%;
+      aspect-ratio: 9/16;
+      max-height: 70vh;
+      object-fit: cover;
+      border-radius: 12px;
+      background: #000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     }
-    @media(max-width:480px){
-      .bl-hero-content .bl-hero-title{font-size:clamp(2rem,10vw,3.5rem);}
-      .bl-hero-actions{flex-direction:column;}.bl-faq{margin-top:24px;}
+    /* Sound toggle button */
+    .bl-sound-toggle {
+      position: absolute;
+      bottom: 16px;
+      right: 12px;
+      z-index: 5;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.55);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.85);
+      transition: background 0.2s;
+      backdrop-filter: blur(4px);
+    }
+    .bl-sound-toggle:hover { background: rgba(0,0,0,0.75); }
+    .bl-sound-toggle svg { width: 18px; height: 18px; }
+
+    /* ============================================================
+       Design Tokens — Brows & Lips Design System
+       ============================================================ */
+    :root {
+      --bl-blush: #d9c0b4;
+      --bl-blush-soft: #e3cdc2;
+      --bl-blush-deep: #c9a594;
+      --bl-blush-100: #f3e6df;
+      --bl-cream: #f8f3ef;
+      --bl-cream-2: #efe7df;
+      --bl-paper: #faf6f2;
+      --bl-white: #fff;
+      --bl-ink: #2a201b;
+      --bl-ink-soft: #4d3f37;
+      --bl-ink-mute: #6b5d55;
+      --bl-line: #e6dcd3;
+      --bl-gold: #b89568;
+      --bl-rose: #c97f7a;
+      --bl-bg: var(--bl-cream);
+      --bl-fg: var(--bl-ink);
+      --bl-fg-soft: var(--bl-ink-soft);
+      --bl-fg-mute: var(--bl-ink-mute);
+      --bl-accent: var(--bl-blush);
+      --bl-accent-deep: var(--bl-blush-deep);
+      --bl-border: var(--bl-line);
+      --bl-font-display: "Anton", "Oswald", "Bebas Neue", Impact, sans-serif;
+      --bl-font-body: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --bl-w-thin: 200;
+      --bl-w-regular: 400;
+      --bl-w-medium: 500;
+      --bl-w-bold: 700;
+      --bl-fs-hero: clamp(56px, 9vw, 140px);
+      --bl-fs-h1: clamp(40px, 6vw, 88px);
+      --bl-fs-h2: clamp(32px, 4.5vw, 60px);
+      --bl-fs-h3: clamp(22px, 2.4vw, 32px);
+      --bl-fs-body: 16px;
+      --bl-fs-small: 14px;
+      --bl-fs-eyebrow: 13px;
+      --bl-lh-display: .95;
+      --bl-lh-heading: 1.1;
+      --bl-lh-body: 1.7;
+      --bl-ls-eyebrow: .18em;
+      --bl-ls-button: .22em;
+      --bl-container: 1240px;
+      --bl-gutter: clamp(20px, 4vw, 64px);
+      --bl-section-y: clamp(72px, 10vw, 140px);
+      --bl-header-h: 76px;
+      --bl-shadow-card: 0 18px 50px -22px rgba(60, 36, 24, .28);
+      --bl-ease: cubic-bezier(.22, .61, .36, 1);
+      --bl-dur-fast: 180ms;
+      --bl-dur-base: 420ms;
+      --bl-dur-slow: 900ms;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--bl-font-body);
+      font-weight: var(--bl-w-thin);
+      font-size: var(--bl-fs-body);
+      line-height: var(--bl-lh-body);
+      color: var(--bl-fg);
+      background: var(--bl-white);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    ::selection { background: var(--bl-blush); color: var(--bl-ink); }
+
+    [data-reveal] { opacity: 0; transform: translateY(28px); transition: opacity 1s var(--bl-ease), transform 1s var(--bl-ease); }
+    [data-reveal].is-in { opacity: 1; transform: none; }
+
+    /* ============================
+       Typography
+       ============================ */
+    .bl-h1 {
+      font-family: var(--bl-font-display);
+      font-size: var(--bl-fs-h1);
+      line-height: var(--bl-lh-heading);
+      text-transform: uppercase;
+      letter-spacing: .01em;
+      color: var(--bl-fg);
+      margin: 0;
+    }
+    .bl-h2 {
+      font-family: var(--bl-font-display);
+      font-size: var(--bl-fs-h2);
+      line-height: var(--bl-lh-heading);
+      text-transform: uppercase;
+      letter-spacing: .01em;
+      margin: 0;
+    }
+    .bl-h3 {
+      font-family: var(--bl-font-display);
+      font-size: var(--bl-fs-h3);
+      line-height: 1.2;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin: 0;
+    }
+    .bl-eyebrow {
+      font-family: var(--bl-font-body);
+      font-weight: var(--bl-w-medium);
+      font-size: var(--bl-fs-eyebrow);
+      letter-spacing: var(--bl-ls-eyebrow);
+      text-transform: uppercase;
+      color: var(--bl-accent-deep);
+    }
+    .bl-body {
+      font-family: var(--bl-font-body);
+      font-weight: var(--bl-w-thin);
+      font-size: var(--bl-fs-body);
+      line-height: var(--bl-lh-body);
+      color: var(--bl-fg-soft);
+      margin: 0 0 1em 0;
+      text-wrap: pretty;
+    }
+    .bl-section-num {
+      font-family: var(--bl-font-display);
+      font-size: clamp(120px, 18vw, 200px);
+      line-height: .8;
+      color: var(--bl-blush);
+      opacity: .55;
+      letter-spacing: -.04em;
+      user-select: none;
+    }
+    .bl-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--bl-font-body);
+      font-weight: var(--bl-w-medium);
+      font-size: 13px;
+      letter-spacing: var(--bl-ls-button);
+      text-transform: uppercase;
+      color: var(--bl-fg);
+      transition: color var(--bl-dur-fast) var(--bl-ease), gap var(--bl-dur-base) var(--bl-ease);
+    }
+    .bl-link:hover { color: var(--bl-accent-deep); gap: 18px; }
+    .bl-link .arrow { transition: transform var(--bl-dur-base) var(--bl-ease); }
+    .bl-link:hover .arrow { transform: translateX(4px); }
+
+    .bl-container { max-width: var(--bl-container); margin: 0 auto; padding-inline: var(--bl-gutter); }
+    .bl-section { padding-block: var(--bl-section-y); }
+
+    /* ============================
+       Buttons
+       ============================ */
+    .bl-btn {
+      --pad-y: 18px;
+      --pad-x: 36px;
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      padding: var(--pad-y) var(--pad-x);
+      font-family: var(--bl-font-body);
+      font-weight: var(--bl-w-medium);
+      font-size: 13px;
+      letter-spacing: var(--bl-ls-button);
+      text-transform: uppercase;
+      white-space: nowrap;
+      border: 1px solid var(--bl-ink);
+      background: transparent;
+      color: var(--bl-ink);
+      cursor: pointer;
+      transition: background var(--bl-dur-base) var(--bl-ease), color var(--bl-dur-base) var(--bl-ease), transform var(--bl-dur-fast) var(--bl-ease), border-color var(--bl-dur-base) var(--bl-ease);
+    }
+    .bl-btn:hover { background: var(--bl-ink); color: var(--bl-cream); }
+    .bl-btn:active { transform: translateY(1px); }
+    .bl-btn--primary { background: var(--bl-ink); color: var(--bl-cream); }
+    .bl-btn--primary:hover { background: var(--bl-blush-deep); border-color: var(--bl-blush-deep); }
+    .bl-btn--blush { background: var(--bl-blush); color: var(--bl-ink); border-color: var(--bl-blush); }
+    .bl-btn--blush:hover { background: var(--bl-blush-deep); border-color: var(--bl-blush-deep); color: var(--bl-cream); }
+    .bl-btn--ghost { background: transparent; color: var(--bl-cream); border-color: var(--bl-cream); }
+    .bl-btn--ghost:hover { background: var(--bl-cream); color: var(--bl-ink); }
+    .bl-btn .arrow { transition: transform var(--bl-dur-base) var(--bl-ease); display: inline-block; }
+    .bl-btn:hover .arrow { transform: translateX(6px); }
+
+    .bl-coin {
+      position: relative;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: var(--bl-blush);
+      color: var(--bl-ink);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--bl-font-display);
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      animation: bl-pulse 3s var(--bl-ease) infinite;
+      transition: transform var(--bl-dur-base) var(--bl-ease), background var(--bl-dur-base) var(--bl-ease);
+    }
+    .bl-coin:hover { transform: scale(1.06) rotate(8deg); background: var(--bl-blush-deep); color: var(--bl-cream); }
+    @keyframes bl-pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(217,192,180,.6); } 50% { box-shadow: 0 0 0 22px rgba(217,192,180,0); } }
+
+    /* ============================
+       Header
+       ============================ */
+    .bl-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      background: rgba(248, 243, 239, .92);
+      -webkit-backdrop-filter: blur(10px) saturate(120%);
+      backdrop-filter: blur(10px) saturate(120%);
+      border-bottom: 1px solid var(--bl-line);
+      transition: transform .42s var(--bl-ease), background .42s var(--bl-ease), box-shadow .42s var(--bl-ease);
+    }
+    .bl-header--hidden { transform: translateY(-100%); }
+    .bl-header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding-block: 18px;
+    }
+    .bl-header__inner { max-width: var(--bl-container); margin: 0 auto; padding-inline: var(--bl-gutter); }
+    .bl-header__logo { display: flex; align-items: center; gap: 10px; margin-top: -3px; }
+    .bl-header__logo img { height: 30px; width: auto; max-width: 140px; }
+    .bl-header__logo .bl-logo-text { font-family: var(--bl-font-display); font-size: 24px; letter-spacing: .04em; text-transform: uppercase; color: var(--bl-ink); }
+    .bl-header__logo .bl-logo-text em { font-style: normal; color: var(--bl-blush-deep); }
+
+    .bl-nav { display: flex; gap: 24px; align-items: center; }
+    .bl-nav__link {
+      font-family: var(--bl-font-body);
+      font-weight: var(--bl-w-regular);
+      font-size: 12px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--bl-fg);
+      position: relative;
+      padding: 6px 0;
+      transition: color var(--bl-dur-fast) var(--bl-ease);
+    }
+    .bl-nav__link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background: currentColor;
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform var(--bl-dur-base) var(--bl-ease);
+    }
+    .bl-nav__link:hover { color: var(--bl-accent-deep); }
+    .bl-nav__link:hover::after { transform: scaleX(1); }
+
+    .bl-header__cta { display: flex; gap: 12px; align-items: center; }
+    .bl-header__cta .bl-btn { --pad-y: 10px; --pad-x: 20px; gap: 8px; font-size: 11px; }
+    .bl-icon-btn { width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--bl-blush-100); color: var(--bl-ink); border: none; cursor: pointer; transition: background var(--bl-dur-fast) var(--bl-ease), transform var(--bl-dur-fast) var(--bl-ease); }
+    .bl-icon-btn:hover { background: var(--bl-blush); transform: translateY(-1px); }
+    .bl-icon-btn svg { width: 18px; height: 18px; }
+
+    .bl-burger { display: none; width: 36px; height: 36px; background: none; border: 0; cursor: pointer; touch-action: manipulation; position: relative; z-index: 60; }
+    .bl-burger span { display: block; width: 22px; height: 1.5px; background: var(--bl-ink); margin: 5px auto; transition: transform .3s ease, opacity .3s ease; }
+    .bl-burger.is-active span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .bl-burger.is-active span:nth-child(2) { opacity: 0; }
+    .bl-burger.is-active span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    .bl-overlay { display: none; }
+    .bl-nav-close { display: none; }
+
+    /* ============================
+       Hero — Fullscreen Video
+       ============================ */
+    .bl-hero-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      min-height: 580px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: var(--bl-ink);
+      padding-top: var(--bl-header-h);
+    }
+    .bl-hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.45;
+      pointer-events: none;
+    }
+    .bl-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.55) 100%);
+    }
+    .bl-hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 900px;
+      padding: 0 var(--bl-gutter);
+    }
+    .bl-hero-content .bl-eyebrow {
+      display: inline-block;
+      color: var(--bl-blush);
+      margin-bottom: 20px;
+      font-size: 14px;
+      letter-spacing: .3em;
+    }
+    .bl-hero-content .bl-hero-title {
+      font-family: var(--bl-font-display);
+      font-size: clamp(2.8rem, 8vw, 6rem);
+      color: var(--bl-blush);
+      line-height: var(--bl-lh-display);
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 30px rgba(0, 0, 0, 0.5);
+    }
+    .bl-hero-content .bl-hero-sub {
+      font-weight: 300;
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+    .bl-hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .bl-hero-actions .bl-btn { font-size: 14px; --pad-x: 40px; --pad-y: 18px; }
+    .bl-hero-trust {
+      margin-top: 36px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .bl-hero-trust span {
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.65);
+      border: 1px solid rgba(217, 192, 180, 0.3);
+      padding: 6px 14px;
+    }
+
+    /* ============================
+       Marquee Banner
+       ============================ */
+    .bl-banner { background: var(--bl-blush); }
+    .bl-marquee { overflow: hidden; padding: 24px 0; }
+    .bl-marquee__track {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+      white-space: nowrap;
+      animation: bl-marquee 80s linear infinite;
+      font-family: var(--bl-font-display);
+      font-weight: 700;
+      font-weight: 700;
+      font-size: clamp(24px, 3vw, 40px);
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: .02em;
+    }
+    .bl-marquee__sep { color: #fff; margin: 0 36px; font-size: .6em; opacity: .5; }
+    @keyframes bl-marquee { to { transform: translateX(-50%); } }
+
+    /* ============================
+       Services
+       ============================ */
+    .bl-services { background: var(--bl-cream); }
+    .bl-services .bl-container { display: grid; gap: 48px; }
+    .bl-services-head { margin-bottom: 12px; }
+    .bl-services-head .bl-eyebrow { display: block; margin-bottom: 14px; }
+    .bl-services-head .bl-h2 { max-width: 18ch; }
+    .bl-services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 1100px) {
+      .bl-services-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .bl-services-grid { grid-template-columns: 1fr; }
+    }
+    .bl-service-card {
+      background: var(--bl-white);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--bl-dur-base) var(--bl-ease), box-shadow var(--bl-dur-base) var(--bl-ease);
+    }
+    .bl-service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--bl-shadow-card);
+    }
+    .bl-service-card__img {
+      position: relative;
+      aspect-ratio: 3/2;
+      overflow: hidden;
+      background: var(--bl-cream-2);
+    }
+    .bl-service-card__img img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 41%;
+      transition: transform var(--bl-dur-slow) var(--bl-ease);
+    }
+    .bl-service-card:hover .bl-service-card__img img { transform: scale(1.05); }
+    .bl-service-card__body { padding: 28px 24px 32px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+    .bl-service-card__body h3 { font-family: var(--bl-font-display); font-size: 1.4rem; text-transform: uppercase; letter-spacing: .04em; }
+    .bl-service-card__body p { font-weight: 300; font-size: .93rem; color: var(--bl-fg-soft); line-height: 1.7; margin: 0; flex: 1; }
+    .bl-service-card__body .bl-service-price { }
+    .bl-service-price {
+      font-size: .82rem;
+      letter-spacing: .1em;
+      color: var(--bl-accent-deep);
+      font-weight: var(--bl-w-medium);
+    }
+    .bl-service-card .bl-btn { align-self: flex-start; --pad-y: 12px; --pad-x: 24px; font-size: 11px; margin-top: auto; }
+
+    /* ============================
+       Number block (shared)
+       ============================ */
+    .bl-numblock { display: grid; grid-template-columns: auto 1fr; gap: clamp(20px, 4vw, 80px); align-items: start; }
+    .bl-numblock__body { max-width: 56ch; }
+
+    /* ============================
+       Gallery
+       ============================ */
+    .bl-gallery { position: relative; overflow: hidden; background: var(--bl-ink); color: var(--bl-cream); }
+    .bl-gallery-bg { position: absolute; inset: 0; z-index: 0; }
+    .bl-gallery-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: linear-gradient(to right, rgba(42,32,27,.92) 0%, rgba(42,32,27,.6) 70%, rgba(42,32,27,.75) 100%);
+    }
+    .bl-gallery .bl-container { position: relative; z-index: 3; }
+    .bl-gallery .bl-h2 { color: var(--bl-cream); margin-bottom: 24px; }
+    .bl-gallery .bl-body { color: var(--bl-blush-100); }
+    .bl-gallery .bl-section-num { color: var(--bl-blush); opacity: .4; }
+    .bl-gallery .bl-eyebrow { color: var(--bl-blush); display: block; margin-bottom: 14px; }
+    .bl-gallery .bl-link { color: var(--bl-cream); }
+
+    .bl-masonry { display: flex; gap: 6px; align-items: flex-start; margin-top: 40px; }
+    .bl-masonry-col { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+    .bl-masonry-item { position: relative; overflow: hidden; cursor: pointer; }
+    .bl-masonry-item img { width: 100%; display: block; transition: transform var(--bl-dur-slow) var(--bl-ease); }
+    .bl-masonry-item:hover img { transform: scale(1.04); }
+
+    /* ============================
+       Testimonials
+       ============================ */
+    .bl-testimonials {
+      background: var(--bl-ink);
+      color: var(--bl-white);
+      text-align: center;
+    }
+    .bl-testimonials .bl-eyebrow { color: var(--bl-blush); display: block; margin-bottom: 14px; }
+    .bl-testimonials .bl-h2 { color: var(--bl-blush); }
+    .bl-testimonials .bl-section-num { color: var(--bl-blush); opacity: .3; }
+
+    .bl-slider-wrap { position: relative; overflow: hidden; max-width: 680px; margin: 48px auto 0; }
+    .bl-slider { display: flex; transition: transform .5s ease; }
+    .bl-slide { min-width: 100%; padding: 0 16px; }
+    .bl-slide .stars { font-size: 1.3rem; margin-bottom: 18px; color: var(--bl-blush); }
+    .bl-slide blockquote {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 300;
+      font-style: italic;
+      margin-bottom: 18px;
+    }
+    .bl-slide cite { font-size: .82rem; letter-spacing: .16em; text-transform: uppercase; color: var(--bl-blush); font-style: normal; }
+
+    .bl-slider-dots { display: flex; gap: 10px; justify-content: center; margin-top: 28px; }
+    .bl-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: rgba(255, 255, 255, 0.25);
+      cursor: pointer; transition: background .3s; border: none;
+    }
+    .bl-dot.active { background: var(--bl-blush); }
+
+    /* ============================
+       Booking / Contact
+       ============================ */
+    .bl-booking { background: var(--bl-cream); }
+    .bl-booking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin-top: 40px; }
+    .bl-booking-info h3 { font-family: var(--bl-font-display); font-size: 1.5rem; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 16px; }
+    .bl-booking-info p { font-weight: 300; color: var(--bl-fg-soft); line-height: 1.8; margin-bottom: 28px; }
+    .bl-contact-list { display: flex; flex-direction: column; gap: 12px; }
+    .bl-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: .9rem;
+      color: var(--bl-fg);
+      text-decoration: none;
+      padding: 16px 20px;
+      border: 1px solid var(--bl-border);
+      transition: background var(--bl-dur-fast) var(--bl-ease), border-color var(--bl-dur-fast) var(--bl-ease);
+    }
+    .bl-contact-item:hover { background: rgba(217, 192, 180, .08); border-color: var(--bl-accent-deep); }
+    .bl-contact-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--bl-blush-100);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--bl-accent-deep);
+      flex-shrink: 0;
+    }
+    .bl-contact-icon svg { width: 18px; height: 18px; }
+    .bl-contact-label {
+      font-family: var(--bl-font-body);
+      font-weight: var(--bl-w-medium);
+      font-size: 13px;
+      letter-spacing: var(--bl-ls-eyebrow);
+      text-transform: uppercase;
+      color: var(--bl-fg);
+    }
+    .bl-contact-value {
+      margin-left: auto;
+      font-size: 14px;
+      color: var(--bl-fg-soft);
+    }
+    .bl-contact-item--compact {
+      padding: 12px 16px;
+      gap: 14px;
+    }
+    .bl-contact-item--compact .bl-contact-icon {
+      width: 36px;
+      height: 36px;
+    }
+    .bl-contact-item--compact .bl-contact-icon svg { width: 16px; height: 16px; }
+
+    .bl-map-wrap { width: 100%; min-height: 380px; position: relative; overflow: hidden; }
+    .bl-map-wrap iframe { width: 100%; height: 100%; min-height: 380px; border: 0; filter: saturate(0%); }
+    .bl-map-wrap:hover iframe { filter: saturate(100%); }
+
+    /* ============================
+       CTA Final
+       ============================ */
+    .bl-cta-final {
+      position: relative;
+      min-height: 440px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      isolation: isolate;
+      background: var(--bl-ink);
+    }
+    .bl-cta-bg { position: absolute; inset: 0; z-index: 0; }
+    .bl-cta-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: linear-gradient(rgba(42,32,27,.75), rgba(42,32,27,.75));
+    }
+    .bl-cta-final .bl-container { position: relative; z-index: 3; text-align: center; color: var(--bl-cream); }
+    .bl-cta-final .bl-eyebrow { color: var(--bl-blush); display: block; margin-bottom: 16px; }
+    .bl-cta-final .bl-h1 { color: var(--bl-cream); margin: 16px auto 36px; max-width: 22ch; }
+
+    /* ============================
+       Footer
+       ============================ */
+    .bl-footer { background: var(--bl-cream-2); color: var(--bl-fg); padding-block: 40px; }
+    .bl-footer .bl-container { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; font-size: .83rem; font-weight: 300; }
+    .bl-footer a { color: var(--bl-fg-soft); transition: color var(--bl-dur-fast) var(--bl-ease); }
+    .bl-footer a:hover { color: var(--bl-accent-deep); }
+    .bl-footer span { color: var(--bl-fg-mute); }
+
+    /* ============================
+       Sticky CTA
+       ============================ */
+    .bl-sticky {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 998;
+      border-top: 1px solid var(--bl-blush);
+      display: none;
+    }
+    .bl-sticky-inner { display: grid; grid-template-columns: 1fr 1fr; }
+    .bl-sticky a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: .82rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 14px 10px;
+      font-weight: var(--bl-w-medium);
+    }
+    .bl-sticky-book { background: var(--bl-blush); color: var(--bl-ink); }
+    .bl-sticky-wa { background: var(--bl-blush-soft); color: var(--bl-ink); }
+    .bl-sticky-wa svg { width: 18px; height: 18px; vertical-align: middle; }
+
+    /* Floating WhatsApp */
+    .bl-floating-wa {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: var(--bl-blush);
+      box-shadow: 0 4px 16px rgba(217, 192, 180, .4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--bl-ink);
+      text-decoration: none;
+      transition: transform .3s;
+      animation: wa-pulse 3s ease infinite;
+    }
+    .bl-floating-wa:hover { transform: scale(1.08); }
+    .bl-floating-wa svg { width: 26px; height: 26px; }
+    @keyframes wa-pulse { 0% { box-shadow: 0 4px 16px rgba(217,192,180,.3); } 50% { box-shadow: 0 4px 24px rgba(217,192,180,.5); } 100% { box-shadow: 0 4px 16px rgba(217,192,180,.3); } }
+
+    /* ============================
+       Responsive
+       ============================ */
+    @media (max-width: 980px) {
+      .bl-nav { display: none; }
+      .bl-burger { display: inline-block; }
+      .bl-header__cta .bl-btn { --pad-y: 8px; --pad-x: 14px; font-size: 10px; gap: 4px; }
+
+      .bl-mobile-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--bl-cream);
+        z-index: 9998;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 100px 40px 32px;
+        transform: translateX(-100%);
+        transition: transform .42s var(--bl-ease);
+        overflow-y: auto;
+      }
+      .bl-mobile-nav.open { transform: translateX(0); }
+      .bl-mobile-nav a {
+        padding: 16px 0;
+        font-size: 15px;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+        color: var(--bl-fg);
+        border-bottom: 1px solid var(--bl-line);
+      }
+      .bl-mobile-nav .bl-btn { margin-top: 20px; justify-content: center; }
+      .bl-mobile-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--bl-ink);
+      }
+      .bl-mobile-close svg { width: 22px; height: 22px; }
+      .bl-mobile-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(42,32,27,.3);
+        z-index: 9997;
+        cursor: pointer;
+      }
+      .bl-mobile-overlay.open { display: block; }
+    }
+
+    @media (max-width: 768px) {
+      :root { --bl-header-h: 64px; }
+      .bl-header__logo img { height: 24px; max-width: 120px; }
+      .bl-header__inner { padding-block: 14px; gap: 8px; }
+      .bl-header__cta .bl-btn { --pad-y: 6px; --pad-x: 10px; font-size: 9px; gap: 2px; }
+      .bl-header__cta .bl-icon-btn { width: 30px; height: 30px; }
+      .bl-header__cta .bl-icon-btn svg { width: 14px; height: 14px; }
+      .bl-header__cta { gap: 6px; }
+
+      .bl-booking-grid { grid-template-columns: 1fr; gap: 32px; }
+      .bl-masonry { flex-direction: column; }
+      .bl-masonry-col { gap: 4px; }
+      .bl-sticky { display: block; }
+
+      .bl-floating-wa { display: none; }
+      .bl-hero-trust span { font-size: 10px; padding: 5px 10px; }
+
+      .bl-footer .bl-container { flex-direction: column; text-align: center; }
+      .bl-footer { padding-bottom: 80px; }
+    }
+
+    @media (max-width: 600px) {
+      :root { --bl-header-h: 59px; }
+      .bl-header__logo img { height: 20px; max-width: 100px; }
+      .bl-header__inner { padding-block: 12px; }
+      .bl-services-grid { grid-template-columns: 1fr; }
+      .bl-hero-content .bl-hero-title { font-size: clamp(2rem, 10vw, 3.5rem); }
+      .bl-hero-actions { flex-direction: column; }
+      .bl-coin { width: 100px; height: 100px; font-size: 12px; }
+    }
+
+    @media (max-width: 400px) {
+      :root { --bl-header-h: 51px; }
+      .bl-header__logo img { height: 16px; max-width: 80px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
     }
   </style>
 </head>
 <body>
-<!-- MOBILE NAV -->
-<nav class="bl-mobile-nav" id="bl-mobile-nav">
-  <button class="bl-nav-close" id="bl-mobile-close" aria-label="Close menu">&#10005;</button>
-  <a href="#home" class="bl-nav__link">Home</a>
-  <a href="#services" class="bl-nav__link">Services</a>
-  <a href="#gallery" class="bl-nav__link">Gallery</a>
-  <a href="#testimonials" class="bl-nav__link">Reviews</a>
-  <a href="#booking" class="bl-nav__link">Contact</a>
-</nav>
-<div class="bl-overlay" id="bl-mobile-overlay"></div>
-<!-- HEADER -->
+
+<!-- ============= HEADER ============= -->
 <header class="bl-header" id="bl-header">
   <div class="bl-header__inner">
-    <a href="https://browsandlips.ae" class="bl-header__logo" aria-label="Brows & Lips home">
-      <span class="bl-logo-text">Brows &amp; <em>Lips</em></span>
+    <a href="/" class="bl-header__logo" aria-label="Brows & Lips home">
+      <img src="./assets/BROWSLIPS_logo_web_brown-350x100-1-300x86.webp" alt="Brows &amp; Lips" width="300" height="86" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="bl-logo-text" style="display:none">BROWS <em>&amp;</em> LIPS</span>
     </a>
+
     <nav class="bl-nav" aria-label="Primary">
-      <a href="#home" class="bl-nav__link">Home</a>
       <a href="#services" class="bl-nav__link">Services</a>
       <a href="#gallery" class="bl-nav__link">Gallery</a>
       <a href="#testimonials" class="bl-nav__link">Reviews</a>
       <a href="#booking" class="bl-nav__link">Contact</a>
     </nav>
+
     <div class="bl-header__cta">
       <a href="tel:+971585902690" class="bl-icon-btn" aria-label="Call us">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a17 17 0 01-17-17 1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a17 17 0 01-17-17 1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
       </a>
       <a href="https://wa.me/971585902690?text=Hi%2C%20I%27d%20like%20to%20know%20about%20your%20brow%20and%20lash%20lamination%20services" class="bl-icon-btn" aria-label="WhatsApp us">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       </a>
-      <a href="https://b740742.alteg.io" class="bl-btn bl-btn--primary ms_booking">Book <span class="arrow">&#10230;</span></a>
+      <a href="https://b740742.alteg.io" class="bl-btn bl-btn--primary ms_booking">
+        Book now <span class="arrow">⟶</span>
+      </a>
       <button class="bl-burger" id="bl-burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
+
+<!-- Mobile Nav -->
+<div class="bl-mobile-overlay" id="bl-mobile-overlay"></div>
+<nav class="bl-mobile-nav" id="bl-mobile-nav" aria-label="Mobile navigation">
+  <button class="bl-mobile-close" id="bl-mobile-close" aria-label="Close menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <a href="#services" class="bl-nav__link">Services</a>
+  <a href="#gallery" class="bl-nav__link">Gallery</a>
+  <a href="#testimonials" class="bl-nav__link">Reviews</a>
+  <a href="#booking" class="bl-nav__link">Contact</a>
+</nav>
+
 <main>
-<!-- HERO -->
+
+<!-- ============= HERO ============= -->
 <section class="bl-hero-section" id="home">
-  <video class="bl-hero-video" autoplay muted loop playsinline preload="metadata"><source src="/assets/lash-reel.mp4" type="video/mp4"></video>
+  <video class="bl-hero-video" autoplay muted loop playsinline preload="metadata">
+    <source src="./assets/lash-reel.mp4" type="video/mp4">
+  </video>
   <div class="bl-hero-overlay"></div>
   <div class="bl-hero-content" data-reveal>
-    <span class="bl-eyebrow">Brow & Lash Lamination &#183; Dubai</span>
+    <span class="bl-eyebrow">Brow &amp; Lash Lamination · Dubai</span>
     <h1 class="bl-hero-title">Brow &amp; Lash<br/>Lamination / Lift</h1>
-    <p class="bl-hero-sub">Professional brow lamination and lash lift in Dubai. Natural-looking volume, curl, and definition without extensions<br/>Brow Lamination &#183; Lash Lift &#183; Brow &amp; Lash Tinting</p>
+    <p class="bl-hero-sub">Professional brow lamination and lash lift in Dubai<br/>Brow Lamination · Lash Lift · Brow &amp; Lash Tinting</p>
     <div class="bl-hero-actions">
-      <a href="#services" class="bl-btn" style="background:var(--bl-blush);color:var(--bl-ink);border-color:var(--bl-blush)">Our Services <span class="arrow">&#10230;</span></a>
-      <a href="https://b740742.alteg.io" class="bl-coin ms_booking" aria-label="Book now"><span>BOOK&nbsp;NOW</span></a>
+      <a href="#services" class="bl-btn" style="background:var(--bl-blush);color:var(--bl-ink);border-color:var(--bl-blush)">
+        B&amp;L Services <span class="arrow">⟶</span>
+      </a>
+      <a href="https://b740742.alteg.io" class="bl-coin ms_booking" aria-label="Book now">
+        <span>BOOK&nbsp;NOW</span>
+      </a>
     </div>
     <div class="bl-hero-trust">
-      <span>100% Satisfaction</span><span>7,000+ Happy Clients</span><span>Lasts 4-6 Weeks</span><span>DHA Certified</span>
+      <span>100% Satisfaction</span>
+      <span>Lasts 4-6 Weeks</span>
+      <span>7,000+ Happy Clients</span>
+      <span>DHA Certified</span>
     </div>
   </div>
 </section>
-<!-- MARQUEE -->
+
+<!-- ============= MARQUEE BANNER ============= -->
 <section class="bl-banner" aria-hidden="true">
-  <div class="bl-marquee"><div class="bl-marquee__track">
-    <span>BROW LAMINATION &#183; LASH LIFT &#183; BROW LIFT &#183; LASH LAMINATION</span><span class="bl-marquee__sep">&#10022;</span>
-    <span>BROW LAMINATION &#183; LASH LIFT &#183; BROW LIFT &#183; LASH LAMINATION</span><span class="bl-marquee__sep">&#10022;</span>
-    <span>BROW LAMINATION &#183; LASH LIFT &#183; BROW LIFT &#183; LASH LAMINATION</span><span class="bl-marquee__sep">&#10022;</span>
-    <span>BROW LAMINATION &#183; LASH LIFT &#183; BROW LIFT &#183; LASH LAMINATION</span><span class="bl-marquee__sep">&#10022;</span>
-  </div></div>
+  <div class="bl-marquee">
+    <div class="bl-marquee__track">
+      <span>BROW LAMINATION · LASH LIFT · BROW LIFT · LASH LAMINATION</span><span class="bl-marquee__sep">✦</span>
+      <span>BROW LAMINATION · LASH LIFT · BROW LIFT · LASH LAMINATION</span><span class="bl-marquee__sep">✦</span>
+      <span>BROW LAMINATION · LASH LIFT · BROW LIFT · LASH LAMINATION</span><span class="bl-marquee__sep">✦</span>
+      <span>BROW LAMINATION · LASH LIFT · BROW LIFT · LASH LAMINATION</span><span class="bl-marquee__sep">✦</span>
+    </div>
+  </div>
 </section>
-<!-- 01 SERVICES -->
+
+<!-- ============= 01 — SERVICES ============= -->
 <section class="bl-section bl-services" id="services">
   <div class="bl-container">
     <div class="bl-numblock">
@@ -324,50 +1073,41 @@ if(href.indexOf('tel:')===0)track('phone_click',{'event_category':'engagement','
       <div class="bl-numblock__body" data-reveal>
         <span class="bl-eyebrow">What We Offer</span>
         <h2 class="bl-h2">Our Services</h2>
-        <p class="bl-body">Expert brow lamination and lash lift treatments in Dubai. Using premium products and advanced techniques to enhance your natural features with beautiful, long-lasting results.</p>
+        <p class="bl-body">Expert brow lamination and lash lift treatments in Dubai. Premium products and advanced techniques for beautiful, long-lasting results.</p>
       </div>
     </div>
+
     <div class="bl-services-grid" data-reveal>
+      <!-- Brow Lamination -->
       <div class="bl-service-card">
-        <div class="bl-service-card__img"><img src="/assets/placeholder-brow.webp" alt="Brow Lamination Dubai" loading="lazy" onerror="this.style.background='var(--bl-blush-100)'"></div>
+        <div class="bl-service-card__img">
+          <img src="./assets/img_8ab7f9ce0574.jpeg" alt="Brow Lamination Dubai" loading="lazy" style="object-position:50% 50%;">
+        </div>
         <div class="bl-service-card__body">
           <h3>Brow Lamination / Lift</h3>
-          <span class="bl-service-price">From AED 180</span>
-          <p>A professional brow lamination treatment that re-shapes and sets brow hairs in a brushed-up, full, and defined position. Also available with tinting for added colour and definition. Your brows stay perfectly styled for 4 to 6 weeks with zero daily effort.</p>
-          <a href="https://browsandlips.ae/services/eyebrow-lamination/" class="bl-link" target="_blank">Learn more <span class="arrow">&#10230;</span></a>
-          <a href="https://b740742.alteg.io" class="bl-btn ms_booking">Book now <span class="arrow">&#10230;</span></a>
+          <p>A professional brow treatment that re-shapes and sets brows in a brushed-up, full position. Perfectly styled brows that last 4 to 6 weeks with zero daily effort. Also available with tinting for added colour and definition.</p>
+          <span class="bl-service-price">FROM AED 180 · 45 MIN SESSION</span>
+          <a href="https://b740742.alteg.io" class="bl-btn ms_booking">Book now <span class="arrow">⟶</span></a>
         </div>
       </div>
+
+      <!-- Lash Lamination -->
       <div class="bl-service-card">
-        <div class="bl-service-card__img"><img src="/assets/img_8ab7f9ce0574.jpeg" alt="Lash Lamination / Lift Dubai - Before and After" loading="lazy"></div>
+        <div class="bl-service-card__img">
+          <img src="./assets/img_eda1fec1752a.jpeg" alt="Lash Lamination / Lift Dubai" loading="lazy" style="object-position:50% 50%;">
+        </div>
         <div class="bl-service-card__body">
           <h3>Lash Lamination / Lift</h3>
-          <span class="bl-service-price">From AED 200</span>
-          <p>A luxurious lash lift treatment that curls and lifts your natural lashes from the root, creating a wide-awake, doe-eyed look. Includes a keratin-infused setting lotion to strengthen and condition. No extensions, no damage &#8212; just naturally beautiful lashes for 6 to 8 weeks.</p>
-          <a href="https://browsandlips.ae/services/eyelash-lamination/" class="bl-link" target="_blank">Learn more <span class="arrow">&#10230;</span></a>
-          <a href="https://b740742.alteg.io" class="bl-btn ms_booking">Book now <span class="arrow">&#10230;</span></a>
+          <p>A luxurious lash lift that curls and lifts your natural lashes from the root, creating a wide-awake, doe-eyed look. Keratin-infused formula conditions as it curls. No extensions, no damage — just beautiful lashes for 6 to 8 weeks.</p>
+          <span class="bl-service-price">FROM AED 200 · 60 MIN SESSION</span>
+          <a href="https://b740742.alteg.io" class="bl-btn ms_booking">Book now <span class="arrow">⟶</span></a>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- WHY -->
-<section class="bl-section" style="background:var(--bl-cream-2);text-align:center;">
-  <div class="bl-container">
-    <div data-reveal>
-      <p class="bl-eyebrow">Why Choose Us</p>
-      <h2 class="bl-h2" style="margin-bottom:48px;">Why Brows &amp; Lips</h2>
-    </div>
-    <div class="bl-benefits-grid" data-reveal>
-      <div class="bl-benefit-card"><div class="bl-benefit-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span class="bl-benefit-card__title">DHA Certified Technicians</span><p class="bl-benefit-card__sub">All our artists hold Dubai Health Authority certification and continuously train in the latest lamination and lifting techniques.</p></div>
-      <div class="bl-benefit-card"><div class="bl-benefit-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><span class="bl-benefit-card__title">10+ Years Experience</span><p class="bl-benefit-card__sub">Over a decade of expertise in brow and lash services. Thousands of satisfied clients across Dubai and the UAE.</p></div>
-      <div class="bl-benefit-card"><div class="bl-benefit-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><span class="bl-benefit-card__title">7,000+ Happy Clients</span><p class="bl-benefit-card__sub">Join thousands who trust us with their brows and lashes. Our 4.9-star Google rating reflects our commitment to exceptional results.</p></div>
-      <div class="bl-benefit-card"><div class="bl-benefit-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><span class="bl-benefit-card__title">Premium Products</span><p class="bl-benefit-card__sub">We use only professional-grade, keratin-infused products. Your safety, comfort, and beautiful results are our top priorities.</p></div>
     </div>
   </div>
 </section>
 
-<!-- 02 GALLERY -->
+<!-- ============= 02 — GALLERY ============= -->
 <section class="bl-section bl-gallery" id="gallery">
   <div class="bl-container">
     <div class="bl-numblock">
@@ -378,86 +1118,63 @@ if(href.indexOf('tel:')===0)track('phone_click',{'event_category':'engagement','
         <p class="bl-body">See the transformation our lash lift treatments achieve. Natural lashes enhanced with beautiful curl and definition.</p>
       </div>
     </div>
+
     <div class="bl-masonry" data-reveal>
       <div class="bl-masonry-col">
-        <div class="bl-masonry-item"><img src="/assets/img_8ab7f9ce0574.jpeg" alt="Lash Lift Before and After - Side View" loading="lazy"></div>
-        <div class="bl-masonry-item"><img src="/assets/img_eda1fec1752a.jpeg" alt="Lash Lift Before and After - Close Detail" loading="lazy"></div>
+        <div class="bl-masonry-item"><img src="./assets/img_8ab7f9ce0574.jpeg" alt="Lash Lift Before and After - Side View" loading="lazy"></div>
+        <div class="bl-masonry-item"><img src="./assets/img_eda1fec1752a.jpeg" alt="Lash Lift Before and After - Close Detail" loading="lazy"></div>
       </div>
       <div class="bl-masonry-col">
-        <div class="bl-masonry-item"><img src="/assets/img_4f28059db75f.jpeg" alt="Lash Lift Before and After - Front View" loading="lazy"></div>
-        <div class="bl-masonry-item"><img src="/assets/img_addfd8f162ac.jpeg" alt="Lash Lift Before and After - Angled View" loading="lazy"></div>
+        <div class="bl-masonry-item"><img src="./assets/img_4f28059db75f.jpeg" alt="Lash Lift Before and After - Front View" loading="lazy"></div>
+        <div class="bl-masonry-item"><img src="./assets/img_addfd8f162ac.jpeg" alt="Lash Lift Before and After - Angled View" loading="lazy"></div>
       </div>
     </div>
-  </div>
-</section>
+  </div></section>
 
-<!-- LASH REEL + FAQ -->
-<section class="bl-section" id="reel-lash" style="background:var(--bl-cream);text-align:center;">
+<!-- ============= INSTAGRAM REEL ============= -->
+<section class="bl-section" id="reel" style="background:var(--bl-cream);text-align:center;">
   <div class="bl-container">
     <div data-reveal>
-      <span class="bl-eyebrow">Have Questions? Watch This</span>
-      <h2 class="bl-h2" style="margin-bottom:32px;">Your Lash Lift Journey</h2>
+      <span class="bl-eyebrow">See the transformation</span>
+      <h2 class="bl-h2" style="margin-bottom:32px;">Lash Lift in Action</h2>
     </div>
     <div data-reveal style="max-width:420px;margin:0 auto;position:relative;">
-      <video class="bl-reel-video" id="bl-reel-video" autoplay muted loop playsinline preload="metadata"><source src="/assets/lash-reel.mp4" type="video/mp4"></video>
+      <video class="bl-reel-video" id="bl-reel-video" autoplay muted loop playsinline preload="metadata">
+        <source src="./assets/lash-reel.mp4" type="video/mp4">
+      </video>
+      <!-- Sound toggle button -->
       <button class="bl-sound-toggle" id="bl-sound-toggle" aria-label="Unmute video">
         <svg class="bl-sound-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M23 9l-6 6M17 9l6 6"/></svg>
         <svg class="bl-sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/></svg>
       </button>
     </div>
-    <div class="bl-faq" data-reveal>
-      <h3 class="bl-h3" style="margin-bottom:24px;text-align:center;">Lash Lamination / Lift &#8212; FAQ</h3>
-      <div class="bl-faq-item"><button class="bl-faq-q">What is a lash lift and how does it work?<span class="bl-faq-icon">+</span></button><div class="bl-faq-a"><div class="bl-faq-a-inner">A lash lift is a professional treatment that uses a gentle perming solution to curl your natural lashes from the root, creating an upward lift that makes your eyes appear wider and more awake. The lashes are set on a silicone rod, treated with a lifting lotion and a setting lotion, and finished with a keratin-infused conditioner. The result is a beautiful, natural curl that lasts 6 to 8 weeks.</div></div></div>
-      <div class="bl-faq-item"><button class="bl-faq-q">Is a lash lift different from lash extensions?<span class="bl-faq-icon">+</span></button><div class="bl-faq-a"><div class="bl-faq-a-inner">Yes! Lash extensions involve attaching synthetic fibres to each natural lash, while a lash lift works with your own lashes, curling them from the root for a natural, low-maintenance look. A lash lift requires no daily upkeep, no special sleeping positions, and causes no damage to your natural lashes. It is the perfect alternative for anyone wanting a natural enhancement without extensions.</div></div></div>
-      <div class="bl-faq-item"><button class="bl-faq-q">How long does a lash lift last?<span class="bl-faq-icon">+</span></button><div class="bl-faq-a"><div class="bl-faq-a-inner">Results typically last 6 to 8 weeks, depending on your natural lash growth cycle. As your lashes naturally shed and new ones grow in, the effect gradually fades. To maintain your lifted look, we recommend booking a repeat session every 6 to 8 weeks.</div></div></div>
-      <div class="bl-faq-item"><button class="bl-faq-q">Is a lash lift safe for my natural lashes?<span class="bl-faq-icon">+</span></button><div class="bl-faq-a"><div class="bl-faq-a-inner">Yes, when performed by a trained professional. We use only professional-grade, keratin-infused products that are gentle on your lashes. The treatment actually conditions and strengthens your lashes. It is important to follow aftercare instructions: avoid water, steam, and mascara for the first 24 to 48 hours.</div></div></div>
-      <div class="bl-faq-item"><button class="bl-faq-q">Can I get a lash tint with my lash lift?<span class="bl-faq-icon">+</span></button><div class="bl-faq-a"><div class="bl-faq-a-inner">Absolutely! A lash tint is the perfect complement to a lash lift. The tint darkens your lashes, making them appear thicker and more defined, while the lift opens up your eyes. Together they create a dramatic, mascara-like effect without any daily effort. Ask about our lash lift and tint combo.</div></div></div>
-    </div>
   </div>
 </section>
 
-<!-- BROW REEL + FAQ -->
-<section class="bl-section" id="reel-brow" style="background:var(--bl-cream-2);text-align:center;">
-  <div class="bl-container">
-    <div data-reveal>
-      <span class="bl-eyebrow">Beautiful Brows Start Here</span>
-      <h2 class="bl-h2" style="margin-bottom:32px;">Your Brow Lamination Journey</h2>
-    </div>
-    <div data-reveal style="max-width:420px;margin:0 auto;position:relative;">
-      <video class="bl-reel-video" id="bl-reel-video-brow" autoplay muted loop playsinline preload="metadata"><source src="/assets/placeholder-brow-reel.mp4" type="video/mp4"></video>
-      <button class="bl-sound-toggle" id="bl-sound-toggle-brow" aria-label="Unmute video">
-        <svg class="bl-sound-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M23 9l-6 6M17 9l6 6"/></svg>
-        <svg class="bl-sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/></svg>
-      </button>
-    </div>
-    <div class="bl-faq" data-reveal>
-      <h3 class="bl-h3" style="margin-bottom:24px;text-align:center;">Brow Lamination / Lift &#8212; FAQ</h3>
-      <div class="bl-faq-item"><button class="bl-faq-q">What is brow lamination and how does it work?<span class="bl-faq-icon">+</span></button><div class="bl-faq-a"><div class="bl-faq-a-inner">Brow lamination is a professional brow styling treatment that sets your brow hairs in an upward, brushed position. A gentle perming solution is applied to break down the hair bonds, then the brows are brushed into the desired shape and a setting solution locks them in place. The result is full, fluffy, perfectly styled brows that last 4 to 6 weeks.</div></div></div>
-      <div class="bl-faq-item"><button class="bl-faq-q">Is brow lamination suitable for sparse brows?<span class="bl-faq-icon">+</span></button><div class="bl-faq-a"><div class="bl-faq-a-inner">Yes! Brow lamination is especially effective for sparse or unruly brows. The treatment lifts and repositions every hair, creating the illusion of fuller, thicker brows. When combined with tinting, it can dramatically transform thin or patchy brows into a full, defined shape without the need for microblading or daily filling in.</div></div></div>
-      <div class="bl-faq-item"><button class="bl-faq-q">How long does brow lamination last?<span class="bl-faq-icon">+</span></button><div class="bl-faq-a"><div class="bl-faq-a-inner">Results typically last 4 to 6 weeks, depending on your natural hair growth cycle. As new hairs grow in and the treated hairs naturally shed, the effect gradually fades. To maintain your lifted look, we recommend booking a repeat session every 4 to 6 weeks.</div></div></div>
-      <div class="bl-faq-item"><button class="bl-faq-q">Can I get brow tinting with lamination?<span class="bl-faq-icon">+</span></button><div class="bl-faq-a"><div class="bl-faq-a-inner">Absolutely! Brow tinting is available as an add-on to your lamination treatment. The tint fills in sparse areas, darkens light brow hairs, and creates a more defined look that complements the laminated, brushed-up effect. This combo is our most popular brow service &#8212; perfect for achieving Instagram-ready brows.</div></div></div>
-      <div class="bl-faq-item"><button class="bl-faq-q">How do I care for my brows after lamination?<span class="bl-faq-icon">+</span></button><div class="bl-faq-a"><div class="bl-faq-a-inner">Keep your brows dry for the first 24 hours, avoid touching or brushing them excessively, and do not use skincare products or makeup directly on the brows. Avoid steam, saunas, and excessive sweating for the first 48 hours. After that, your brows can be gently brushed into place. Use a nourishing brow oil daily to keep hairs conditioned.</div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- 03 TESTIMONIALS -->
+<!-- ============= 03 — TESTIMONIALS ============= -->
 <section class="bl-section bl-testimonials" id="testimonials">
   <div class="bl-container">
     <div class="bl-section-num" style="text-align:center;font-size:clamp(80px,15vw,160px);opacity:.25;">03</div>
     <div data-reveal>
       <span class="bl-eyebrow">Client Love</span>
       <h2 class="bl-h2">What Dubai Says</h2>
-      <div class="bl-rating-summary" style="justify-content:center;"><div class="bl-rating-summary__stars" aria-hidden="true">&#9733; &#9733; &#9733; &#9733; &#9733;</div><strong>4.9 &#183; <span id="review-count">236</span> Google reviews</strong></div>
+      <div class="bl-rating-summary" style="justify-content:center;">
+        <div class="bl-rating-summary__stars" aria-hidden="true">★ ★ ★ ★ ★</div>
+        <strong>4.9 · <span id="review-count">236</span> Google reviews</strong>
+      </div>
     </div>
-    <div class="bl-reviews-carousel" id="bl-reviews-carousel"><div class="bl-reviews-grid" id="bl-reviews-grid"></div></div>
+
+    <div class="bl-reviews-carousel" id="bl-reviews-carousel">
+      <div class="bl-reviews-grid" id="bl-reviews-grid"></div>
+    </div>
+
     <div style="margin-top:32px;text-align:center;" data-reveal>
-      <a class="bl-link" href="https://www.google.com/maps?cid=9297963379539676768" target="_blank" rel="noopener">Read all reviews <span class="arrow">&#10230;</span></a>
+      <a class="bl-link" href="https://www.google.com/maps?cid=9297963379539676768" target="_blank" rel="noopener">Read all reviews <span class="arrow">⟶</span></a>
     </div>
   </div>
 </section>
 
-<!-- 04 BOOKING -->
+<!-- ============= 04 — BOOKING / CONTACT ============= -->
 <section class="bl-section bl-booking" id="booking">
   <div class="bl-container">
     <div class="bl-numblock" data-reveal>
@@ -465,36 +1182,62 @@ if(href.indexOf('tel:')===0)track('phone_click',{'event_category':'engagement','
       <div class="bl-numblock__body">
         <span class="bl-eyebrow">Get in touch</span>
         <h2 class="bl-h2">Book Your Consultation</h2>
-        <p class="bl-body">Ready to transform your brows or lashes? Book your appointment online, send us a WhatsApp message, or give us a call. Our team is here to help you achieve your look.</p>
       </div>
     </div>
+
     <div class="bl-booking-grid" data-reveal>
-      <div class="bl-booking-info"><div class="bl-contact-list">
-        <a class="bl-contact-item" href="https://wa.me/971585902690?text=Hi%2C%20I%27d%20like%20to%20know%20about%20your%20brow%20and%20lash%20lamination%20services" target="_blank"><span class="bl-contact-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></span><span class="bl-contact-label">WhatsApp Us</span></a>
-        <a class="bl-contact-item" href="tel:+971585902690"><span class="bl-contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a17 17 0 01-17-17 1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg></span><span class="bl-contact-label">Call Us</span></a>
-        <a class="bl-contact-item ms_booking" href="https://b740742.alteg.io" target="_blank"><span class="bl-contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span><span class="bl-contact-label">Book Online</span></a>
-      </div></div>
-      <div class="bl-map-wrap"><iframe src="https://maps.google.com/maps?q=Brows%20and%20Lips%20Dubai&t=&z=13&ie=UTF8&iwloc=&output=embed" title="Brows and Lips Dubai Map" allowfullscreen loading="lazy"></iframe></div>
+      <div class="bl-booking-info">
+        <div class="bl-contact-list">
+          <a class="bl-contact-item bl-contact-item--compact" href="https://wa.me/971585902690?text=Hi%2C%20I%27d%20like%20to%20know%20about%20your%20brow%20and%20lash%20lamination%20services" target="_blank">
+            <span class="bl-contact-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </span>
+            <span class="bl-contact-label">WhatsApp Us</span>
+          </a>
+          <a class="bl-contact-item bl-contact-item--compact" href="tel:+971585902690">
+            <span class="bl-contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a17 17 0 01-17-17 1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+            </span>
+            <span class="bl-contact-label">Call Us</span>
+          </a>
+          <a class="bl-contact-item bl-contact-item--compact ms_booking" href="https://b740742.alteg.io" target="_blank">
+            <span class="bl-contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>
+            </span>
+            <span class="bl-contact-label">Book Online</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="bl-map-wrap">
+        <iframe src="https://maps.google.com/maps?q=Brows%20and%20Lips%20Dubai&t=&z=13&ie=UTF8&iwloc=&output=embed" title="Brows and Lips Dubai Map" allowfullscreen loading="lazy"></iframe>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CTA FINAL -->
+<!-- ============= CTA FINAL ============= -->
 <section class="bl-cta-final">
   <div class="bl-container">
     <span class="bl-eyebrow">Treat yourself</span>
     <h2 class="bl-h1">Your brow &amp; lash transformation awaits.</h2>
-    <a href="https://b740742.alteg.io" class="bl-btn bl-btn--ghost ms_booking">Book an appointment <span class="arrow">&#10230;</span></a>
+    <a href="https://b740742.alteg.io" class="bl-btn bl-btn--ghost ms_booking">
+      Book an appointment <span class="arrow">⟶</span>
+    </a>
   </div>
 </section>
 
 </main>
 
-<!-- FOOTER -->
+<!-- ============= FOOTER ============= -->
 <footer class="bl-footer">
   <div class="bl-container">
-    <span>&copy; 2026 &#183; Brows &amp; Lips Dubai</span>
-    <span><a href="https://browsandlips.ae">browsandlips.ae</a> &nbsp;&#183;&nbsp; <a href="https://browsandlips.ae/privacy-policy/">Privacy Policy</a></span>
+    <span>© 2026 · Brows &amp; Lips Dubai</span>
+    <span>
+      <a href="https://browsandlips.ae">browsandlips.ae</a>
+      &nbsp;·&nbsp;
+      <a href="https://browsandlips.ae/privacy-policy/">Privacy Policy</a>
+    </span>
   </div>
 </footer>
 
@@ -510,46 +1253,268 @@ if(href.indexOf('tel:')===0)track('phone_click',{'event_category':'engagement','
 <div class="bl-sticky" id="blStickyCta">
   <div class="bl-sticky-inner">
     <a class="bl-sticky-book ms_booking" href="https://b740742.alteg.io">Book Now</a>
-    <a class="bl-sticky-wa" href="https://wa.me/971585902690?text=Hi%2C%20I%27d%20like%20to%20know%20about%20your%20brow%20and%20lash%20lamination%20services" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp</a>
+    <a class="bl-sticky-wa" href="https://wa.me/971585902690?text=Hi%2C%20I%27d%20like%20to%20know%20about%20your%20brow%20and%20lash%20lamination%20services" target="_blank">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
   </div>
 </div>
+
 <script>
-(function(){var h=document.getElementById(&quot;bl-header&quot;),l=0,t=false;
-function u(){var s=window.scrollY,d=s-l;if(s<=8)h.classList.remove(&quot;bl-header--hidden&quot;);else if(d>12&&s>60)h.classList.add(&quot;bl-header--hidden&quot;);else if(d<-8)h.classList.remove(&quot;bl-header--hidden&quot;);l=s;t=false;}
-function o(){if(!t){requestAnimationFrame(u);t=true;}}
-u();window.addEventListener(&quot;scroll&quot;,o,{passive:true});})();
-(function(){var b=document.getElementById(&quot;bl-burger&quot;),n=document.getElementById(&quot;bl-mobile-nav&quot;),o=document.getElementById(&quot;bl-mobile-overlay&quot;),c=document.getElementById(&quot;bl-mobile-close&quot;);
-function op(){n.classList.add(&quot;open&quot;);o.classList.add(&quot;open&quot;);b.classList.add(&quot;is-active&quot;);}
-function cl(){n.classList.remove(&quot;open&quot;);o.classList.remove(&quot;open&quot;);b.classList.remove(&quot;is-active&quot;);}
-if(b)b.addEventListener(&quot;click&quot;,function(){n.classList.contains(&quot;open&quot;)?cl():op();});
-if(o)o.addEventListener(&quot;click&quot;,cl);if(c)c.addEventListener(&quot;click&quot;,cl);
-if(n)n.querySelectorAll(&quot;a&quot;).forEach(function(a){a.addEventListener(&quot;click&quot;,cl);});})();
-(function(){var e=document.querySelectorAll(&quot;[data-reveal]&quot;);
-if(&quot;IntersectionObserver&quot;in window&&e.length){var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add(&quot;is-in&quot;);io.unobserve(e.target);}});},{threshold:0.12,rootMargin:&quot;0px 0px -8% 0px&quot;});
-e.forEach(function(el){io.observe(el);});}else{e.forEach(function(el){el.classList.add(&quot;is-in&quot;);});}})();
-(function(){var items=document.querySelectorAll(&quot;.bl-faq-item&quot;);
-items.forEach(function(item){var q=item.querySelector(&quot;.bl-faq-q&quot;),a=item.querySelector(&quot;.bl-faq-a&quot;);if(!q||!a)return;
-q.addEventListener(&quot;click&quot;,function(){var isOpen=item.classList.contains(&quot;is-open&quot;);
-items.forEach(function(i){i.classList.remove(&quot;is-open&quot;);i.querySelector(&quot;.bl-faq-a&quot;).style.maxHeight=&quot;0&quot;;});
-if(!isOpen){item.classList.add(&quot;is-open&quot;);a.style.maxHeight=a.scrollHeight+&quot;px&quot;;}});});})();
-(function(){
-var grid=document.getElementById(&quot;bl-reviews-grid&quot;),countEl=document.getElementById(&quot;review-count&quot;);if(!grid)return;
-var reviews=[{author:&quot;Aisha Rahman&quot;,text:&quot;I got the brow lamination and tint - absolutely incredible! Kylie was so gentle and explained every step.&quot;,rating:5,time:&quot;2 weeks ago&quot;},{author:&quot;Sarah Mitchell&quot;,text:&quot;The lash lift changed my whole look! My natural lashes curl up beautifully now. No more mascara needed!&quot;,rating:5,time:&quot;1 month ago&quot;},{author:&quot;Layla Hassan&quot;,text:&quot;First time brow lamination and I am obsessed! My brows look fluffy and full. Highly recommend!&quot;,rating:5,time:&quot;3 weeks ago&quot;},{author:&quot;Maya Chen&quot;,text:&quot;Lash lift + tint combo is a game changer. I wake up with perfect lashes every day.&quot;,rating:5,time:&quot;2 months ago&quot;},{author:&quot;Nadia Patel&quot;,text:&quot;Been getting brow lamination here for over a year. Consistent quality, gentle products, amazing results.&quot;,rating:5,time:&quot;3 months ago&quot;},{author:&quot;Priya Sharma&quot;,text:&quot;First time trying lash lift and I am blown away. My lashes look like extensions but are 100% my own!&quot;,rating:5,time:&quot;1 month ago&quot;}];
-if(countEl)countEl.textContent=&quot;236&quot;;var filtered=reviews;
-function trunc(t,m){if(!t||t.length<=m)return t||&quot;&quot;;var c=t.slice(0,m);var lp=c.lastIndexOf(&quot;.&quot;);if(lp<m-60){var e=t.slice(0,m+40);lp=e.lastIndexOf(&quot;.&quot;);}if(lp>m-100)return t.slice(0,lp+1).trim();var ls=c.lastIndexOf(&quot; &quot;);return(ls>m-60?c.slice(0,ls):c).trim();}
-var ac=[&quot;var(--bl-blush);color:var(--bl-ink)&quot;,&quot;var(--bl-blush-deep)&quot;,&quot;var(--bl-gold)&quot;,&quot;var(--bl-rose)&quot;];
-var isM=window.innerWidth<768,ps=isM?1:4,tp=Math.ceil(filtered.length/ps),cp=0;
-function render(p){var start=p*ps,items=filtered.slice(start,start+ps),html=&quot;&quot;;
-items.forEach(function(r,i){var ini=r.author?r.author.charAt(0).toUpperCase():&quot;?&quot;;var st=&quot;★ &quot;.repeat(r.rating||5).trim();var sh=trunc(r.text,350);
-html+=&quot;<div class=&bsol;"bl-review" data-reveal><div class=&bsol;"bl-review__stars" aria-hidden=&bsol;"true">&quot;+st+&quot;</div><p class=&bsol;"bl-review__text">&quot;+sh+&quot;</p><div class=&bsol;"bl-review__author"><div class=&bsol;"bl-avatar" style=&bsol;"background:&quot;+ac[(start+i)%ac.length]+&quot;">&quot;+ini+&quot;</div><div><strong>&quot;+r.author+&quot;</strong><small>&quot;+r.time+&quot; · Google</small></div></div></div>&quot;;});
-grid.innerHTML=html;
-var ne=grid.querySelectorAll(&quot;[data-reveal]&quot;);
-if(&quot;IntersectionObserver&quot;in window){var io=new IntersectionObserver(function(e){e.forEach(function(e){if(e.isIntersecting){e.target.classList.add(&quot;is-in&quot;);io.unobserve(e.target);}});},{threshold:0.12});ne.forEach(function(el){io.observe(el);});}else{ne.forEach(function(el){el.classList.add(&quot;is-in&quot;);});}}
-render(0);})();
-(function(){var p=document.querySelector(&quot;main&quot;);if(p){p.style.opacity=&quot;0&quot;;p.style.transition=&quot;opacity .35s ease&quot;;requestAnimationFrame(function(){requestAnimationFrame(function(){p.style.opacity=&quot;1&quot;;});});}})();
-(function(){function setup(v,b){var v=document.getElementById(v),b=document.getElementById(b);if(!v||!b)return;var off=b.querySelector(&quot;.bl-sound-off&quot;),on=b.querySelector(&quot;.bl-sound-on&quot;);b.addEventListener(&quot;click&quot;,function(){v.muted=!v.muted;off.style.display=v.muted?&quot;&quot;:&quot;none&quot;;on.style.display=v.muted?&quot;none&quot;:&quot;&quot;;});}
-setup(&quot;bl-reel-video&quot;,&quot;bl-sound-toggle&quot;);setup(&quot;bl-reel-video-brow&quot;,&quot;bl-sound-toggle-brow&quot;);})();
+  // Smart header: hide on scroll down, show on scroll up
+  (function(){
+    var header = document.getElementById('bl-header');
+    var lastY = 0, ticking = false;
+    function update() {
+      var sy = window.scrollY;
+      var dy = sy - lastY;
+      if (sy <= 8) {
+        header.classList.remove('bl-header--hidden');
+      } else if (dy > 12 && sy > 60) {
+        header.classList.add('bl-header--hidden');
+      } else if (dy < -8) {
+        header.classList.remove('bl-header--hidden');
+      }
+      lastY = sy;
+      ticking = false;
+    }
+    function onScroll() { if (!ticking) { requestAnimationFrame(update); ticking = true; } }
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
+
+  // Burger menu
+  (function(){
+    var burger = document.getElementById('bl-burger');
+    var nav = document.getElementById('bl-mobile-nav');
+    var overlay = document.getElementById('bl-mobile-overlay');
+    var closeBtn = document.getElementById('bl-mobile-close');
+
+    function openNav() {
+      nav.classList.add('open');
+      overlay.classList.add('open');
+      burger.classList.add('is-active');
+    }
+    function closeNav() {
+      nav.classList.remove('open');
+      overlay.classList.remove('open');
+      burger.classList.remove('is-active');
+    }
+
+    if (burger) burger.addEventListener('click', function() {
+      nav.classList.contains('open') ? closeNav() : openNav();
+    });
+    if (overlay) overlay.addEventListener('click', closeNav);
+    if (closeBtn) closeBtn.addEventListener('click', closeNav);
+
+    // Close on nav link click
+    nav.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', closeNav);
+    });
+  })();
+
+  // Reveal on scroll
+  (function(){
+    var els = document.querySelectorAll('[data-reveal]');
+    if ('IntersectionObserver' in window && els.length) {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      els.forEach(function(el){ io.observe(el); });
+    } else {
+      els.forEach(function(el){ el.classList.add('is-in'); });
+    }
+  })();
+
+  // Real Google reviews with direct links
+  (function(){
+    var grid = document.getElementById('bl-reviews-grid');
+    var countEl = document.getElementById('review-count');
+    if (!grid) return;
+
+    // 4 real Google Reviews from Brows & Lips (curated by Gary)
+    var reviews = [
+      {
+        author: 'Malichka Karimova',
+        text: 'I was nervous about getting my brows done, but Kylie made the experience incredible from start to finish. She is a true professional — gentle, confident, and incredibly talented. She explained every step and made sure I was comfortable. The result exceeded my expectations — my brows look natural and beautifully defined. I\'m so happy I chose Kylie!',
+        rating: 5,
+        time: '7 months ago',
+        url: 'https://goo.gl/maps/Rqc6y5wxsLYG3CDB6'
+      },
+      {
+        author: 'Erim Kaur',
+        text: 'I keep coming back for my brows! Kylie is so thoughtful and gentle — she takes my vision on board and delivers beyond expectations. The best PMU artist in Dubai, hands down. My brows look incredible!',
+        rating: 5,
+        time: '7 months ago',
+        url: 'https://goo.gl/maps/UocYU61Czzcf7ho28'
+      },
+      {
+        author: 'Shienly Garcia',
+        text: 'I was told microblading might be painful, but at Brows & Lips it was completely comfortable. The numbing was effective and the artist was so gentle — I almost fell asleep! The results are stunning and natural.',
+        rating: 5,
+        time: '7 months ago',
+        url: 'https://goo.gl/maps/zALxBonA22YrDouv9'
+      },
+      {
+        author: 'vidalyn miranda',
+        text: 'I got my brows done by master Kylie — and it was the best decision! The result is clean, natural, and beautiful. If you\'re looking for a brow studio in Dubai, this is the place. You won\'t regret it!',
+        rating: 5,
+        time: '10 months ago',
+        url: 'https://goo.gl/maps/RHhMeCH835mwpST29'
+      }
+    ];
+
+    if (countEl) countEl.textContent = '236';
+
+    var filtered = reviews;
+
+    function truncate(text, max) {
+      if (!text || text.length <= max) return text || '';
+      var cut = text.slice(0, max);
+      var lastPeriod = cut.lastIndexOf('.');
+      if (lastPeriod < max - 60) {
+        var extended = text.slice(0, max + 40);
+        lastPeriod = extended.lastIndexOf('.');
+      }
+      if (lastPeriod > max - 100) return text.slice(0, lastPeriod + 1).trim();
+      var lastSpace = cut.lastIndexOf(' ');
+      return (lastSpace > max - 60 ? cut.slice(0, lastSpace) : cut).trim();
+    }
+
+    var avatarColors = ['var(--bl-blush);color:var(--bl-ink)', 'var(--bl-blush-deep)', 'var(--bl-gold)', 'var(--bl-rose)'];
+    var carousel = document.getElementById('bl-reviews-carousel');
+    var isMobile = window.innerWidth < 768;
+    var pageSize = isMobile ? 1 : 4;
+    var totalPages = Math.ceil(filtered.length / pageSize);
+    var currentPage = 0;
+
+    function renderCarousel(page) {
+      var start = page * pageSize;
+      var items = filtered.slice(start, start + pageSize);
+      var html = '';
+      items.forEach(function(r, i){
+        var initial = r.author ? r.author.charAt(0).toUpperCase() : '?';
+        var stars = '★ '.repeat(r.rating || 5).trim();
+        var short = truncate(r.text, 350);
+        html += '<a href="' + r.url + '" target="_blank" rel="noopener" class="bl-review" style="cursor:pointer;text-decoration:none;color:inherit;" data-reveal>' +
+          '<div class="bl-review__stars" aria-hidden="true">' + stars + '</div>' +
+          '<p class="bl-review__text">' + short + '</p>' +
+          '<div class="bl-review__author">' +
+            '<div class="bl-avatar" style="background:' + avatarColors[(start + i) % avatarColors.length] + ';">' + initial + '</div>' +
+            '<div><strong>' + r.author + '</strong><small>' + (r.time || '') + ' · Google</small></div>' +
+          '</div>' +
+        '</a>';
+      });
+      grid.innerHTML = html;
+      grid.setAttribute('style', 'grid-template-columns: repeat(' + Math.min(pageSize, items.length) + ', 1fr) !important');
+
+      if (prevBtn) prevBtn.style.display = page > 0 ? '' : 'none';
+      if (nextBtn) nextBtn.style.display = page < totalPages - 1 ? '' : 'none';
+      if (pageIndicator) pageIndicator.textContent = (page + 1) + ' / ' + totalPages;
+
+      var newEls = grid.querySelectorAll('[data-reveal]');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function(entries){
+          entries.forEach(function(e){
+            if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        newEls.forEach(function(el){ io.observe(el); });
+      } else {
+        newEls.forEach(function(el){ el.classList.add('is-in'); });
+      }
+    }
+
+    var prevBtn = document.createElement('button');
+    prevBtn.innerHTML = '‹';
+    prevBtn.setAttribute('aria-label', 'Previous reviews');
+    prevBtn.style.cssText = 'background:none;border:none;color:var(--bl-ink-mute);font-size:36px;cursor:pointer;padding:8px;transition:color .3s ease,transform .2s ease;line-height:1;';
+    prevBtn.onmouseover = function(){ this.style.color = 'var(--bl-ink)'; this.style.transform = 'scale(1.2)'; };
+    prevBtn.onmouseout = function(){ this.style.color = 'var(--bl-ink-mute)'; this.style.transform = 'scale(1)'; };
+    prevBtn.onclick = function(){ if (currentPage > 0) { currentPage--; renderCarousel(currentPage); } };
+
+    var nextBtn = document.createElement('button');
+    nextBtn.innerHTML = '›';
+    nextBtn.setAttribute('aria-label', 'Next reviews');
+    nextBtn.style.cssText = 'background:none;border:none;color:var(--bl-ink-mute);font-size:36px;cursor:pointer;padding:8px;transition:color .3s ease,transform .2s ease;line-height:1;';
+    nextBtn.onmouseover = function(){ this.style.color = 'var(--bl-ink)'; this.style.transform = 'scale(1.2)'; };
+    nextBtn.onmouseout = function(){ this.style.color = 'var(--bl-ink-mute)'; this.style.transform = 'scale(1)'; };
+    nextBtn.onclick = function(){ if (currentPage < totalPages - 1) { currentPage++; renderCarousel(currentPage); } };
+
+    if (isMobile) {
+      var navRow = document.createElement('div');
+      navRow.style.cssText = 'display:flex;align-items:center;justify-content:center;gap:24px;margin-top:16px;';
+      var pageIndicator = document.createElement('span');
+      pageIndicator.style.cssText = 'font-size:13px;color:var(--bl-fg-mute);letter-spacing:.1em;font-weight:500;';
+      navRow.appendChild(prevBtn);
+      navRow.appendChild(pageIndicator);
+      navRow.appendChild(nextBtn);
+      carousel.appendChild(navRow);
+
+      var touchStartX = 0, touchEndX = 0;
+      carousel.addEventListener('touchstart', function(e){
+        touchStartX = e.changedTouches[0].screenX;
+      }, {passive: true});
+      carousel.addEventListener('touchend', function(e){
+        touchEndX = e.changedTouches[0].screenX;
+        var diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 40) {
+          if (diff > 0 && currentPage < totalPages - 1) {
+            currentPage++; renderCarousel(currentPage);
+          } else if (diff < 0 && currentPage > 0) {
+            currentPage--; renderCarousel(currentPage);
+          }
+        }
+      }, {passive: true});
+    } else {
+      var pageIndicator = null;
+      prevBtn.style.position = 'absolute';
+      prevBtn.style.left = '-28px';
+      prevBtn.style.top = '50%';
+      prevBtn.style.transform = 'translateY(-50%)';
+      prevBtn.style.zIndex = '10';
+      carousel.appendChild(prevBtn);
+      carousel.appendChild(nextBtn);
+      nextBtn.style.position = 'absolute';
+      nextBtn.style.right = '-28px';
+      nextBtn.style.top = '50%';
+      nextBtn.style.transform = 'translateY(-50%)';
+      nextBtn.style.zIndex = '10';
+    }
+
+    renderCarousel(0);
+  })();
+
+  // Page transition fade-in
+  (function(){
+    var page = document.querySelector('main');
+    if (page) { page.style.opacity = '0'; page.style.transition = 'opacity .35s ease';
+      requestAnimationFrame(function(){ requestAnimationFrame(function(){ page.style.opacity = '1'; }); }); }
+  })();
+
+  // Sound toggle for reel video
+  (function(){
+    var video = document.getElementById('bl-reel-video');
+    var btn = document.getElementById('bl-sound-toggle');
+    var offIcon = btn && btn.querySelector('.bl-sound-off');
+    var onIcon = btn && btn.querySelector('.bl-sound-on');
+    if (!video || !btn) return;
+    btn.addEventListener('click', function(){
+      video.muted = !video.muted;
+      offIcon.style.display = video.muted ? '' : 'none';
+      onIcon.style.display = video.muted ? 'none' : '';
+      btn.setAttribute('aria-label', video.muted ? 'Unmute video' : 'Mute video');
+    });
+  })();
 </script>
-<noscript><img height=&quot;1&quot; width=&quot;1&quot; style=&quot;display:none&quot; src=&quot;https://www.googletagmanager.com/ns.html?id=G-KFQSYDQ0TR&quot; alt=&quot;&quot;></noscript>
+
+<!-- GA4 noscript fallback -->
+<noscript>
+  <img height="1" width="1" style="display:none" src="https://www.googletagmanager.com/ns.html?id=G-KFQSYDQ0TR" alt="">
+</noscript>
+
 </body>
 </html>
+<!-- Preview build 1780031682 -->
