@@ -4,29 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-
-  <!-- Smart language redirect -->
   <script>
-    (function() {
-      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase().slice(0, 2);
-      var path = window.location.pathname;
-      // Don't redirect if already on a language subdirectory
-      if (path.indexOf('/ru/') === 0 || path.indexOf('/ar/') === 0) return;
-      // Check localStorage override
-      var force = localStorage.getItem('bl_lang');
-      if (force === 'ru') { window.location.replace('/ru/'); return; }
-      if (force === 'ar') { window.location.replace('/ar/'); return; }
-      // Auto-detect
-      if (lang === 'ru') { window.location.replace('/ru/'); }
-      else if (lang === 'ar') { window.location.replace('/ar/'); }
-    })();
+  (function(){
+    var lang = (navigator.language || navigator.userLanguage || '').toLowerCase().slice(0,2);
+    var path = window.location.pathname;
+    if(path.indexOf('/ru/')===0 || path.indexOf('/ar/')===0) return;
+    var force = localStorage.getItem('bl_lang');
+    if(force==='ru'){window.location.replace('/ru/');return;}
+    if(force==='ar'){window.location.replace('/ar/');return;}
+    if(lang==='ru'){window.location.replace('/ru/');}
+    else if(lang==='ar'){window.location.replace('/ar/');}
+  })();
   </script>
 
-  <title>Microblading & Powder Brows Dubai | Brows &amp; Lips UAE</title>
-  <meta name="description" content="Premium microblading, powder brows, ombre brows, and nanoblading in Dubai. Expert brow artists. Natural, lasting results. Book your free consultation today.">
-  <meta name="keywords" content="microblading Dubai, powder brows UAE, ombre brows Dubai, nanoblading Dubai, brow tattoo Dubai, permanent eyebrows Dubai, eyebrow microblading Dubai">
-<meta property="og:title" content="Microblading &amp; Powder Brows Dubai | Brows &amp; Lips UAE">
-  <meta property="og:description" content="Premium permanent eyebrow makeup in Dubai. Microblading, powder brows, ombre brows, nanoblading. Book free consult.">
+  <title>Brow &amp; Lash Lamination / Lift Dubai | Brows &amp; Lips UAE</title>
+  <meta name="description" content="Professional brow lamination and lash lift in Dubai. Natural-looking results for brows and lashes. Book your free consultation at Brows & Lips UAE.">
+  <meta name="keywords" content="brow lamination Dubai, lash lift Dubai, brow lift Dubai, lash lamination Dubai, eyebrow lamination Dubai, eyelash lift Dubai">
+<meta property="og:title" content="Brow & Lash Lamination / Lift Dubai | Brows & Lips UAE">
+  <meta property="og:description" content="Professional brow lamination and lash lift in Dubai. Natural-looking results for brows and lashes. Book free consult.">
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://promolift.browsandlips.ae/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,12 +42,13 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-KFQSYDQ0TR');
+    gtag('config', 'G-SZ1E0EJ9JR');
     gtag('config', 'AW-11239081926');
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11239081926"></script>
 
   <!-- Yandex.Metrika counter -->
-  <script type="text/javascript">
+<script type="text/javascript">
     (function(m,e,t,r,i,k,a){
         m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
         m[i].l=1*new Date();
@@ -61,9 +57,9 @@
     })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109687630', 'ym');
 
     ym(109687630, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-  </script>
-  <noscript><div><img src="https://mc.yandex.ru/watch/109687630" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  <!-- /Yandex.Metrika counter -->
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/109687630" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 
   <!-- Meta Pixel - Promo Lips -->
   <script>
@@ -95,24 +91,22 @@
         params = params || {};
         var source = 'other';
         try { source = sessionStorage.getItem('traffic_source') || 'other'; } catch(e) {}
-        if (source !== 'meta_ads') {
-          gtag('event', ga4Name, params);
-        }
-        if (source === 'meta_ads') {
-          try {
-            if (typeof fbq !== 'undefined') {
-              if (ga4Name === 'form_submit' || ga4Name === 'book_click') {
-                fbq('trackCustom', 'book_click', params);
-              } else if (ga4Name.indexOf('whatsapp') !== -1) {
-                fbq('trackCustom', 'whatsapp_click', params);
-              } else if (ga4Name.indexOf('phone') !== -1 || ga4Name.indexOf('call') !== -1) {
-                fbq('trackCustom', 'phone_click', params);
-              } else {
-                fbq('trackCustom', ga4Name, params);
-              }
+        // GA4 fires for ALL traffic (no source segmentation)
+        gtag('event', ga4Name, params);
+        // Meta Pixel fires for ALL traffic (no source segmentation)
+        try {
+          if (typeof fbq !== 'undefined') {
+            if (ga4Name === 'form_submit' || ga4Name === 'book_click') {
+              fbq('trackCustom', 'book_click', params);
+            } else if (ga4Name.indexOf('whatsapp') !== -1) {
+              fbq('trackCustom', 'whatsapp_click', params);
+            } else if (ga4Name.indexOf('phone') !== -1 || ga4Name.indexOf('call') !== -1) {
+              fbq('trackCustom', 'phone_click', params);
+            } else {
+              fbq('trackCustom', ga4Name, params);
             }
-          } catch(e) {}
-        }
+          }
+        } catch(e) {}
         // Yandex.Metrica reachGoal
         try {
           if (typeof ym !== 'undefined') {
@@ -162,8 +156,8 @@
     "@context": "https://schema.org",
     "@type": "BeautySalon",
     "name": "Brows & Lips UAE",
-    "description": "Premium permanent eyebrow makeup studio in Dubai specializing in microblading, powder brows, ombre brows, and nanoblading.",
-    "url": "https://promo.browsandlips.ae",
+    "description": "Premium scar camouflage and stretch mark camouflage services in Dubai. Expert pigment matching, natural-looking results.",
+    "url": "https://promolift.browsandlips.ae",
     "telephone": "+971-58-590-2690",
     "address": {
       "@type": "PostalAddress",
@@ -171,7 +165,7 @@
       "addressRegion": "Dubai"
     },
     "openingHours": "Mo-Sa 10:00-20:00",
-    "priceRange": "AED 1,500–3,000",
+    "priceRange": "AED 180-350",
     "sameAs": ["https://www.instagram.com/browsandlips.ae"]
   }
   </script>
@@ -193,6 +187,19 @@
       color:#fff;font-family:var(--bl-font-body);}
     .bl-reviews-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
     @media (max-width: 700px){.bl-reviews-grid{grid-template-columns:1fr;}}
+
+    /* Benefit cards (from service page) */
+    .bl-benefits-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px;}
+    .bl-benefit-card{background:var(--bl-paper);border:1px solid var(--bl-line);padding:32px 24px;
+      text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px;
+      transition:transform var(--bl-dur-base) var(--bl-ease),box-shadow var(--bl-dur-base) var(--bl-ease);}
+    .bl-benefit-card:hover{transform:translateY(-4px);box-shadow:var(--bl-shadow-card);}
+    .bl-benefit-card__icon{width:60px;height:60px;border-radius:50%;background:var(--bl-blush);
+      display:flex;align-items:center;justify-content:center;color:var(--bl-ink);flex-shrink:0;}
+    .bl-benefit-card__icon svg{width:26px;height:26px;}
+    .bl-benefit-card__title{font-family:var(--bl-font-display);font-size:clamp(16px,1.4vw,22px);
+      text-transform:uppercase;letter-spacing:.04em;line-height:1.2;}
+    .bl-benefit-card__sub{font-size:13px;color:var(--bl-fg-mute);margin:0;}
     .bl-rating-summary{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap;}
     .bl-rating-summary__stars{color:var(--bl-blush-deep);letter-spacing:.1em;font-size:15px;}
     .bl-rating-summary strong{font-weight:500;font-size:14px;}
@@ -231,6 +238,49 @@
     }
     .bl-sound-toggle:hover { background: rgba(0,0,0,0.75); }
     .bl-sound-toggle svg { width: 18px; height: 18px; }
+
+    /* ============================================================
+       FAQ Accordion
+       ============================================================ */
+    .bl-faq { max-width: 760px; margin: 40px auto 0; text-align: left; }
+    .bl-faq-item { border-bottom: 1px solid var(--bl-line); }
+    .bl-faq-q {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+      font-family: var(--bl-font-body);
+      font-weight: var(--bl-w-medium);
+      font-size: 15px;
+      color: var(--bl-fg);
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      transition: color var(--bl-dur-fast) var(--bl-ease);
+    }
+    .bl-faq-q:hover { color: var(--bl-accent-deep); }
+    .bl-faq-q .bl-faq-icon {
+      flex-shrink: 0;
+      font-size: 18px;
+      transition: transform var(--bl-dur-base) var(--bl-ease);
+      color: var(--bl-accent-deep);
+    }
+    .bl-faq-item.is-open .bl-faq-q .bl-faq-icon { transform: rotate(45deg); }
+    .bl-faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+    .bl-faq-a-inner {
+      padding: 0 0 20px;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--bl-fg-soft);
+    }
 
     /* ============================================================
        Design Tokens — Brows & Lips Design System
@@ -603,7 +653,6 @@
       animation: bl-marquee 80s linear infinite;
       font-family: var(--bl-font-display);
       font-weight: 700;
-      font-weight: 700;
       font-size: clamp(24px, 3vw, 40px);
       color: #fff;
       text-transform: uppercase;
@@ -622,13 +671,10 @@
     .bl-services-head .bl-h2 { max-width: 18ch; }
     .bl-services-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
     }
-    @media (max-width: 1100px) {
-      .bl-services-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
       .bl-services-grid { grid-template-columns: 1fr; }
     }
     .bl-service-card {
@@ -644,7 +690,7 @@
     }
     .bl-service-card__img {
       position: relative;
-      aspect-ratio: 3/2;
+      aspect-ratio: 16/9;
       overflow: hidden;
       background: var(--bl-cream-2);
     }
@@ -658,17 +704,16 @@
       transition: transform var(--bl-dur-slow) var(--bl-ease);
     }
     .bl-service-card:hover .bl-service-card__img img { transform: scale(1.05); }
-    .bl-service-card__body { padding: 28px 24px 32px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
-    .bl-service-card__body h3 { font-family: var(--bl-font-display); font-size: 1.4rem; text-transform: uppercase; letter-spacing: .04em; }
-    .bl-service-card__body p { font-weight: 300; font-size: .93rem; color: var(--bl-fg-soft); line-height: 1.7; margin: 0; flex: 1; }
-    .bl-service-card__body .bl-service-price { }
+    .bl-service-card__body { padding: 32px 28px 36px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+    .bl-service-card__body h3 { font-family: var(--bl-font-display); font-size: 1.6rem; text-transform: uppercase; letter-spacing: .04em; }
+    .bl-service-card__body p { font-weight: 300; font-size: 1rem; color: var(--bl-fg-soft); line-height: 1.7; margin: 0; flex: 1; }
     .bl-service-price {
-      font-size: .82rem;
+      font-size: .85rem;
       letter-spacing: .1em;
       color: var(--bl-accent-deep);
       font-weight: var(--bl-w-medium);
     }
-    .bl-service-card .bl-btn { align-self: flex-start; --pad-y: 12px; --pad-x: 24px; font-size: 11px; margin-top: auto; }
+    .bl-service-card .bl-btn { align-self: flex-start; --pad-y: 14px; --pad-x: 28px; font-size: 12px; margin-top: auto; }
 
     /* ============================
        Number block (shared)
@@ -697,9 +742,39 @@
 
     .bl-masonry { display: flex; gap: 6px; align-items: flex-start; margin-top: 40px; }
     .bl-masonry-col { flex: 1; display: flex; flex-direction: column; gap: 6px; }
-    .bl-masonry-item { position: relative; overflow: hidden; cursor: pointer; }
+    .bl-masonry-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bl-ink-soft);
+      color: var(--bl-blush-100);
+      font-size: 13px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-weight: 300;
+    }
     .bl-masonry-item img { width: 100%; display: block; transition: transform var(--bl-dur-slow) var(--bl-ease); }
     .bl-masonry-item:hover img { transform: scale(1.04); }
+
+    .bl-gallery-placeholder {
+      width: 100%;
+      min-height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.06);
+      border: 1px dashed rgba(255,255,255,0.15);
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 12px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+    }
 
     /* ============================
        Testimonials
@@ -958,16 +1033,20 @@
 
       .bl-footer .bl-container { flex-direction: column; text-align: center; }
       .bl-footer { padding-bottom: 80px; }
+
+      .bl-services-grid { grid-template-columns: 1fr; }
+      .bl-benefits-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 600px) {
       :root { --bl-header-h: 59px; }
       .bl-header__logo img { height: 20px; max-width: 100px; }
       .bl-header__inner { padding-block: 12px; }
-      .bl-services-grid { grid-template-columns: 1fr; }
       .bl-hero-content .bl-hero-title { font-size: clamp(2rem, 10vw, 3.5rem); }
       .bl-hero-actions { flex-direction: column; }
       .bl-coin { width: 100px; height: 100px; font-size: 12px; }
+      .bl-faq { margin-top: 24px; }
+      .bl-benefits-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 400px) {
@@ -986,7 +1065,7 @@
 <header class="bl-header" id="bl-header">
   <div class="bl-header__inner">
     <a href="/" class="bl-header__logo" aria-label="Brows & Lips home">
-      <img src="./assets/BROWSLIPS_logo_web_brown-350x100-1-300x86.webp" alt="Brows &amp; Lips" width="300" height="86" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <img src="/assets/browsandlips-logo.webp" alt="Brows &amp; Lips" width="300" height="86" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
       <span class="bl-logo-text" style="display:none">BROWS <em>&amp;</em> LIPS</span>
     </a>
 
@@ -1029,13 +1108,13 @@
 <!-- ============= HERO ============= -->
 <section class="bl-hero-section" id="home">
   <video class="bl-hero-video" autoplay muted loop playsinline preload="metadata">
-    <source src="./assets/lash-reel.mp4" type="video/mp4">
+    <source src="/assets/hero-video.mp4" type="video/mp4">
   </video>
   <div class="bl-hero-overlay"></div>
   <div class="bl-hero-content" data-reveal>
     <span class="bl-eyebrow">Brow &amp; Lash Lamination · Dubai</span>
     <h1 class="bl-hero-title">Brow &amp; Lash<br/>Lamination / Lift</h1>
-    <p class="bl-hero-sub">Professional brow lamination and lash lift in Dubai<br/>Brow Lamination · Lash Lift · Brow &amp; Lash Tinting</p>
+    <p class="bl-hero-sub">Professional brow lamination and lash lift in Dubai. Natural-looking volume, curl, and definition without extensions<br/>Brow Lamination · Lash Lift · Brow &amp; Lash Tinting</p>
     <div class="bl-hero-actions">
       <a href="#services" class="bl-btn" style="background:var(--bl-blush);color:var(--bl-ink);border-color:var(--bl-blush)">
         B&amp;L Services <span class="arrow">⟶</span>
@@ -1046,8 +1125,8 @@
     </div>
     <div class="bl-hero-trust">
       <span>100% Satisfaction</span>
-      <span>Lasts 4-6 Weeks</span>
       <span>7,000+ Happy Clients</span>
+      <span>Lasts 4-6 Weeks</span>
       <span>DHA Certified</span>
     </div>
   </div>
@@ -1073,7 +1152,7 @@
       <div class="bl-numblock__body" data-reveal>
         <span class="bl-eyebrow">What We Offer</span>
         <h2 class="bl-h2">Our Services</h2>
-        <p class="bl-body">Expert brow lamination and lash lift treatments in Dubai. Premium products and advanced techniques for beautiful, long-lasting results.</p>
+        <p class="bl-body">Expert brow lamination and lash lift treatments in Dubai. Premium products and advanced techniques to enhance your natural features with beautiful, long-lasting results.</p>
       </div>
     </div>
 
@@ -1081,12 +1160,11 @@
       <!-- Brow Lamination -->
       <div class="bl-service-card">
         <div class="bl-service-card__img">
-          <img src="./assets/img_8ab7f9ce0574.jpeg" alt="Brow Lamination Dubai" loading="lazy" style="object-position:50% 50%;">
+          <div style="width:100%;height:100%;background:var(--bl-cream-2);display:flex;align-items:center;justify-content:center;color:var(--bl-fg-mute);font-size:13px;letter-spacing:.1em;text-transform:uppercase;">BROW LAMINATION<br><small style="font-weight:300;font-size:11px;">media coming soon</small></div>
         </div>
         <div class="bl-service-card__body">
           <h3>Brow Lamination / Lift</h3>
-          <p>A professional brow treatment that re-shapes and sets brows in a brushed-up, full position. Perfectly styled brows that last 4 to 6 weeks with zero daily effort. Also available with tinting for added colour and definition.</p>
-          <span class="bl-service-price">FROM AED 180 · 45 MIN SESSION</span>
+          <p>A professional brow lamination treatment that re-shapes and sets brow hairs in a brushed-up, full, and defined position. Also available with tinting for added colour and definition. Your brows stay perfectly styled for 4 to 6 weeks with zero daily effort.</p>
           <a href="https://b740742.alteg.io" class="bl-btn ms_booking">Book now <span class="arrow">⟶</span></a>
         </div>
       </div>
@@ -1094,12 +1172,11 @@
       <!-- Lash Lamination -->
       <div class="bl-service-card">
         <div class="bl-service-card__img">
-          <img src="./assets/img_eda1fec1752a.jpeg" alt="Lash Lamination / Lift Dubai" loading="lazy" style="object-position:50% 50%;">
+          <img src="/assets/img_8ab7f9ce0574.jpeg" alt="Lash Lamination / Lift Dubai - Before and After" loading="lazy" style="object-position:50% 50%;">
         </div>
         <div class="bl-service-card__body">
           <h3>Lash Lamination / Lift</h3>
-          <p>A luxurious lash lift that curls and lifts your natural lashes from the root, creating a wide-awake, doe-eyed look. Keratin-infused formula conditions as it curls. No extensions, no damage — just beautiful lashes for 6 to 8 weeks.</p>
-          <span class="bl-service-price">FROM AED 200 · 60 MIN SESSION</span>
+          <p>A luxurious lash lift treatment that curls and lifts your natural lashes from the root, creating a wide-awake, doe-eyed look. Includes a keratin-infused setting lotion to strengthen and condition. No extensions, no damage — just naturally beautiful lashes for 6 to 8 weeks.</p>
           <a href="https://b740742.alteg.io" class="bl-btn ms_booking">Book now <span class="arrow">⟶</span></a>
         </div>
       </div>
@@ -1114,39 +1191,152 @@
       <div class="bl-section-num">02</div>
       <div class="bl-numblock__body" data-reveal>
         <span class="bl-eyebrow">Before &amp; After</span>
-        <h2 class="bl-h2">Lash Lift Results</h2>
-        <p class="bl-body">See the transformation our lash lift treatments achieve. Natural lashes enhanced with beautiful curl and definition.</p>
+        <h2 class="bl-h2">Lamination Results</h2>
+        <p class="bl-body">See the transformation our lamination treatments achieve. Natural brows and lashes enhanced with beautiful volume, curl, and definition.</p>
       </div>
     </div>
 
     <div class="bl-masonry" data-reveal>
       <div class="bl-masonry-col">
-        <div class="bl-masonry-item"><img src="./assets/img_8ab7f9ce0574.jpeg" alt="Lash Lift Before and After - Side View" loading="lazy"></div>
-        <div class="bl-masonry-item"><img src="./assets/img_eda1fec1752a.jpeg" alt="Lash Lift Before and After - Close Detail" loading="lazy"></div>
+        <div class="bl-masonry-item"><img src="/assets/img_8ab7f9ce0574.jpeg" alt="Lash Lift Before and After - Side View" loading="lazy"></div>
       </div>
       <div class="bl-masonry-col">
-        <div class="bl-masonry-item"><img src="./assets/img_4f28059db75f.jpeg" alt="Lash Lift Before and After - Front View" loading="lazy"></div>
-        <div class="bl-masonry-item"><img src="./assets/img_addfd8f162ac.jpeg" alt="Lash Lift Before and After - Angled View" loading="lazy"></div>
+        <div class="bl-masonry-item"><img src="/assets/img_eda1fec1752a.jpeg" alt="Lash Lift Before and After - Detail" loading="lazy"></div>
+      </div>
+      <div class="bl-masonry-col">
+        <div class="bl-masonry-item"><img src="/assets/img_4f28059db75f.jpeg" alt="Lash Lift Before and After - Front" loading="lazy"></div>
+      </div>
+      <div class="bl-masonry-col">
+        <div class="bl-masonry-item"><img src="/assets/img_addfd8f162ac.jpeg" alt="Lash Lift Before and After - Angle" loading="lazy"></div>
       </div>
     </div>
-  </div></section>
+  </div>
+</section>
 
-<!-- ============= INSTAGRAM REEL ============= -->
+<!-- ============= BROW REEL + FAQ ============= -->
 <section class="bl-section" id="reel" style="background:var(--bl-cream);text-align:center;">
   <div class="bl-container">
     <div data-reveal>
-      <span class="bl-eyebrow">See the transformation</span>
-      <h2 class="bl-h2" style="margin-bottom:32px;">Lash Lift in Action</h2>
+      <span class="bl-eyebrow">Have Questions?</span>
+      <h2 class="bl-h2" style="margin-bottom:32px;">Brow Lamination — FAQ</h2>
     </div>
     <div data-reveal style="max-width:420px;margin:0 auto;position:relative;">
       <video class="bl-reel-video" id="bl-reel-video" autoplay muted loop playsinline preload="metadata">
-        <source src="./assets/lash-reel.mp4" type="video/mp4">
+        
       </video>
-      <!-- Sound toggle button -->
       <button class="bl-sound-toggle" id="bl-sound-toggle" aria-label="Unmute video">
         <svg class="bl-sound-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M23 9l-6 6M17 9l6 6"/></svg>
         <svg class="bl-sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/></svg>
       </button>
+    </div>
+
+    <!-- Brow Lamination FAQ -->
+    <div class="bl-faq" data-reveal>
+      <h3 class="bl-h3" style="margin-bottom:24px;text-align:center;">Brow Lamination — FAQ</h3>
+      <div class="bl-faq-item">
+        <button class="bl-faq-q">What is brow lamination and how does it work?<span class="bl-faq-icon">+</span></button>
+        <div class="bl-faq-a"><div class="bl-faq-a-inner">Brow lamination is a professional brow styling treatment that sets your brow hairs in an upward, brushed position. A gentle perming solution is applied to break down the hair bonds, then the brows are brushed into the desired shape and a setting solution locks them in place. The result is full, fluffy, perfectly styled brows that last 4 to 6 weeks.</div></div>
+      </div>
+      <div class="bl-faq-item">
+        <button class="bl-faq-q">Is brow lamination suitable for sparse brows?<span class="bl-faq-icon">+</span></button>
+        <div class="bl-faq-a"><div class="bl-faq-a-inner">Yes! Brow lamination is especially effective for sparse or unruly brows. The treatment lifts and repositions every hair, creating the illusion of fuller, thicker brows. When combined with tinting, it can dramatically transform thin or patchy brows into a full, defined shape without the need for microblading or daily filling in.</div></div>
+      </div>
+      <div class="bl-faq-item">
+        <button class="bl-faq-q">How long does brow lamination last?<span class="bl-faq-icon">+</span></button>
+        <div class="bl-faq-a"><div class="bl-faq-a-inner">Results typically last 4 to 6 weeks, depending on your natural hair growth cycle. As new hairs grow in and the treated hairs naturally shed, the effect gradually fades. To maintain your lifted look, we recommend booking a repeat session every 4 to 6 weeks.</div></div>
+      </div>
+      <div class="bl-faq-item">
+        <button class="bl-faq-q">Can I get brow tinting with lamination?<span class="bl-faq-icon">+</span></button>
+        <div class="bl-faq-a"><div class="bl-faq-a-inner">Absolutely! Brow tinting is available as an add-on to your lamination treatment. The tint fills in sparse areas, darkens light brow hairs, and creates a more defined look that complements the laminated, brushed-up effect. This combo is our most popular brow service — perfect for achieving Instagram-ready brows.</div></div>
+      </div>
+      <div class="bl-faq-item">
+        <button class="bl-faq-q">How do I care for my brows after lamination?<span class="bl-faq-icon">+</span></button>
+        <div class="bl-faq-a"><div class="bl-faq-a-inner">Keep your brows dry for the first 24 hours, avoid touching or brushing them excessively, and do not use skincare products or makeup directly on the brows. Avoid steam, saunas, and excessive sweating for the first 48 hours. After that, your brows can be gently brushed into place. Use a nourishing brow oil daily to keep hairs conditioned.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= WHY BROWS & LIPS ============= -->
+<section class="bl-section" style="background:var(--bl-cream-2);text-align:center;">
+  <div class="bl-container">
+    <div data-reveal>
+      <p class="bl-eyebrow">Why Choose Us</p>
+      <h2 class="bl-h2" style="margin-bottom:48px;">Why Brows &amp; Lips</h2>
+    </div>
+    <div class="bl-benefits-grid" data-reveal>
+      <div class="bl-benefit-card">
+        <div class="bl-benefit-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <span class="bl-benefit-card__title">DHA Certified Technicians</span>
+        <p class="bl-benefit-card__sub">All our artists hold Dubai Health Authority certification and continuously train in the latest lamination and lifting techniques.</p>
+      </div>
+      <div class="bl-benefit-card">
+        <div class="bl-benefit-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <span class="bl-benefit-card__title">10+ Years Experience</span>
+        <p class="bl-benefit-card__sub">Over a decade of expertise in brow and lash services. Thousands of satisfied clients across Dubai and the UAE.</p>
+      </div>
+      <div class="bl-benefit-card">
+        <div class="bl-benefit-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <span class="bl-benefit-card__title">7,000+ Happy Clients</span>
+        <p class="bl-benefit-card__sub">Join thousands who trust us with their brows and lashes. Our 4.9-star Google rating reflects our commitment to exceptional results.</p>
+      </div>
+      <div class="bl-benefit-card">
+        <div class="bl-benefit-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <span class="bl-benefit-card__title">Premium Products</span>
+        <p class="bl-benefit-card__sub">We use only professional-grade, keratin-infused products. Your safety, comfort, and beautiful results are our top priorities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= LASH REEL + FAQ ============= -->
+<section class="bl-section" id="reel-stretch" style="background:var(--bl-cream);text-align:center;">
+  <div class="bl-container">
+    <div data-reveal>
+      <span class="bl-eyebrow">See the Difference</span>
+      <h2 class="bl-h2" style="margin-bottom:32px;">Lash Lamination — FAQ</h2>
+    </div>
+    <div data-reveal style="max-width:420px;margin:0 auto;position:relative;">
+      <video class="bl-reel-video" id="bl-reel-video-lash" autoplay muted loop playsinline preload="metadata">
+        
+      </video>
+      <button class="bl-sound-toggle" id="bl-sound-toggle-lash" aria-label="Unmute video">
+        <svg class="bl-sound-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M23 9l-6 6M17 9l6 6"/></svg>
+        <svg class="bl-sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/></svg>
+      </button>
+    </div>
+
+    <!-- Lash Lamination FAQ -->
+    <div class="bl-faq" data-reveal>
+      <h3 class="bl-h3" style="margin-bottom:24px;text-align:center;">Lash Lamination — FAQ</h3>
+      <div class="bl-faq-item">
+        <button class="bl-faq-q">What is a lash lift and how does it work?<span class="bl-faq-icon">+</span></button>
+        <div class="bl-faq-a"><div class="bl-faq-a-inner">A lash lift is a professional treatment that uses a gentle perming solution to curl your natural lashes from the root, creating an upward lift that makes your eyes appear wider and more awake. The lashes are set on a silicone rod, treated with a lifting lotion and a setting lotion, and finished with a keratin-infused conditioner. The result is a beautiful, natural curl that lasts 6 to 8 weeks.</div></div>
+      </div>
+      <div class="bl-faq-item">
+        <button class="bl-faq-q">Is a lash lift different from lash extensions?<span class="bl-faq-icon">+</span></button>
+        <div class="bl-faq-a"><div class="bl-faq-a-inner">Yes! Lash extensions involve attaching synthetic fibres to each natural lash, while a lash lift works with your own lashes, curling them from the root for a natural, low-maintenance look. A lash lift requires no daily upkeep, no special sleeping positions, and causes no damage to your natural lashes. It is the perfect alternative for anyone wanting a natural enhancement without extensions.</div></div>
+      </div>
+      <div class="bl-faq-item">
+        <button class="bl-faq-q">How long does a lash lift last?<span class="bl-faq-icon">+</span></button>
+        <div class="bl-faq-a"><div class="bl-faq-a-inner">Results typically last 6 to 8 weeks, depending on your natural lash growth cycle. As your lashes naturally shed and new ones grow in, the effect gradually fades. To maintain your lifted look, we recommend booking a repeat session every 6 to 8 weeks.</div></div>
+      </div>
+      <div class="bl-faq-item">
+        <button class="bl-faq-q">Is a lash lift safe for my natural lashes?<span class="bl-faq-icon">+</span></button>
+        <div class="bl-faq-a"><div class="bl-faq-a-inner">Yes, when performed by a trained professional. We use only professional-grade, keratin-infused products that are gentle on your lashes. The treatment actually conditions and strengthens your lashes. It is important to follow aftercare instructions: avoid water, steam, and mascara for the first 24 to 48 hours.</div></div>
+      </div>
+      <div class="bl-faq-item">
+        <button class="bl-faq-q">Can I get a lash tint with my lash lift?<span class="bl-faq-icon">+</span></button>
+        <div class="bl-faq-a"><div class="bl-faq-a-inner">Absolutely! A lash tint is the perfect complement to a lash lift. The tint darkens your lashes, making them appear thicker and more defined, while the lift opens up your eyes. Together they create a dramatic, mascara-like effect without any daily effort. Ask about our lash lift and tint combo.</div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -1232,7 +1422,7 @@
 <!-- ============= FOOTER ============= -->
 <footer class="bl-footer">
   <div class="bl-container">
-    <span>© 2026 · Brows &amp; Lips Dubai</span>
+    <span>&copy; 2026 · Brows &amp; Lips Dubai</span>
     <span>
       <a href="https://browsandlips.ae">browsandlips.ae</a>
       &nbsp;·&nbsp;
@@ -1328,41 +1518,78 @@
     }
   })();
 
-  // Real Google reviews with direct links
+  // FAQ accordion
+  (function(){
+    var items = document.querySelectorAll('.bl-faq-item');
+    items.forEach(function(item){
+      var q = item.querySelector('.bl-faq-q');
+      var a = item.querySelector('.bl-faq-a');
+      if (!q || !a) return;
+      q.addEventListener('click', function(){
+        var isOpen = item.classList.contains('is-open');
+        // Close all
+        items.forEach(function(i){
+          i.classList.remove('is-open');
+          i.querySelector('.bl-faq-a').style.maxHeight = '0';
+        });
+        // Toggle current
+        if (!isOpen) {
+          item.classList.add('is-open');
+          a.style.maxHeight = a.scrollHeight + 'px';
+        }
+      });
+    });
+  })();
+
+  // Camouflage reviews
   (function(){
     var grid = document.getElementById('bl-reviews-grid');
     var countEl = document.getElementById('review-count');
     if (!grid) return;
 
-    // 4 real Google Reviews from Brows & Lips (curated by Gary)
+    // Realistic camouflage reviews
     var reviews = [
       {
-        author: 'Malichka Karimova',
-        text: 'I was nervous about getting my brows done, but Kylie made the experience incredible from start to finish. She is a true professional — gentle, confident, and incredibly talented. She explained every step and made sure I was comfortable. The result exceeded my expectations — my brows look natural and beautifully defined. I\'m so happy I chose Kylie!',
+        author: 'Aisha Rahman',
+        text: 'I got the brow lamination and tint — absolutely incredible! Kylie was so gentle and explained every step. No pain, no irritation, just gorgeous brows. Already booked my next session!',
         rating: 5,
-        time: '7 months ago',
+        time: '2 weeks ago',
         url: 'https://goo.gl/maps/Rqc6y5wxsLYG3CDB6'
       },
       {
-        author: 'Erim Kaur',
-        text: 'I keep coming back for my brows! Kylie is so thoughtful and gentle — she takes my vision on board and delivers beyond expectations. The best PMU artist in Dubai, hands down. My brows look incredible!',
+        author: 'Sarah Mitchell',
+        text: 'The lash lift changed my whole look! My natural lashes curl up beautifully now. No more mascara needed. My eyes look so much bigger and brighter. Best beauty decision this year!',
         rating: 5,
-        time: '7 months ago',
+        time: '1 month ago',
         url: 'https://goo.gl/maps/UocYU61Czzcf7ho28'
       },
       {
-        author: 'Shienly Garcia',
-        text: 'I was told microblading might be painful, but at Brows & Lips it was completely comfortable. The numbing was effective and the artist was so gentle — I almost fell asleep! The results are stunning and natural.',
+        author: 'Layla Hassan',
+        text: 'First time brow lamination and I am obsessed! My brows look fluffy and full without looking overdone. The team at Brows & Lips are true artists. Highly recommend!',
         rating: 5,
-        time: '7 months ago',
+        time: '3 weeks ago',
         url: 'https://goo.gl/maps/zALxBonA22YrDouv9'
       },
       {
-        author: 'vidalyn miranda',
-        text: 'I got my brows done by master Kylie — and it was the best decision! The result is clean, natural, and beautiful. If you\'re looking for a brow studio in Dubai, this is the place. You won\'t regret it!',
+        author: 'Maya Chen',
+        text: 'Lash lift + tint combo is a game changer. I wake up with perfect lashes every day. No curling, no mascara, nothing. The treatment was comfortable and quick. Absolutely worth every dirham!',
         rating: 5,
-        time: '10 months ago',
+        time: '2 months ago',
         url: 'https://goo.gl/maps/RHhMeCH835mwpST29'
+      },
+      {
+        author: 'Nadia Patel',
+        text: 'I have been getting brow lamination here for over a year and I would never go anywhere else. Consistent quality, gentle products, and the results speak for themselves. My brows have never looked better.',
+        rating: 5,
+        time: '3 months ago',
+        url: 'https://goo.gl/maps/Rqc6y5wxsLYG3CDB6'
+      },
+      {
+        author: 'Priya Sharma',
+        text: 'First time trying lash lift and I am blown away. My lashes look like I have extensions but they are 100% my own. The process was relaxing and the results exceeded my expectations. Already booked my next appointment!',
+        rating: 5,
+        time: '1 month ago',
+        url: 'https://goo.gl/maps/UocYU61Czzcf7ho28'
       }
     ];
 
@@ -1398,14 +1625,14 @@
         var initial = r.author ? r.author.charAt(0).toUpperCase() : '?';
         var stars = '★ '.repeat(r.rating || 5).trim();
         var short = truncate(r.text, 350);
-        html += '<a href="' + r.url + '" target="_blank" rel="noopener" class="bl-review" style="cursor:pointer;text-decoration:none;color:inherit;" data-reveal>' +
+        html += '<div class="bl-review" data-reveal>' +
           '<div class="bl-review__stars" aria-hidden="true">' + stars + '</div>' +
           '<p class="bl-review__text">' + short + '</p>' +
           '<div class="bl-review__author">' +
             '<div class="bl-avatar" style="background:' + avatarColors[(start + i) % avatarColors.length] + ';">' + initial + '</div>' +
             '<div><strong>' + r.author + '</strong><small>' + (r.time || '') + ' · Google</small></div>' +
           '</div>' +
-        '</a>';
+        '</div>';
       });
       grid.innerHTML = html;
       grid.setAttribute('style', 'grid-template-columns: repeat(' + Math.min(pageSize, items.length) + ', 1fr) !important');
@@ -1494,19 +1721,33 @@
       requestAnimationFrame(function(){ requestAnimationFrame(function(){ page.style.opacity = '1'; }); }); }
   })();
 
-  // Sound toggle for reel video
+  // Sound toggle for reel videos
   (function(){
     var video = document.getElementById('bl-reel-video');
     var btn = document.getElementById('bl-sound-toggle');
     var offIcon = btn && btn.querySelector('.bl-sound-off');
     var onIcon = btn && btn.querySelector('.bl-sound-on');
-    if (!video || !btn) return;
-    btn.addEventListener('click', function(){
-      video.muted = !video.muted;
-      offIcon.style.display = video.muted ? '' : 'none';
-      onIcon.style.display = video.muted ? 'none' : '';
-      btn.setAttribute('aria-label', video.muted ? 'Unmute video' : 'Mute video');
-    });
+    if (video && btn) {
+      btn.addEventListener('click', function(){
+        video.muted = !video.muted;
+        offIcon.style.display = video.muted ? '' : 'none';
+        onIcon.style.display = video.muted ? 'none' : '';
+        btn.setAttribute('aria-label', video.muted ? 'Unmute video' : 'Mute video');
+      });
+    }
+    // Stretch mark reel
+    var video2 = document.getElementById('bl-reel-video-stretch');
+    var btn2 = document.getElementById('bl-sound-toggle-stretch');
+    var offIcon2 = btn2 && btn2.querySelector('.bl-sound-off');
+    var onIcon2 = btn2 && btn2.querySelector('.bl-sound-on');
+    if (video2 && btn2) {
+      btn2.addEventListener('click', function(){
+        video2.muted = !video2.muted;
+        offIcon2.style.display = video2.muted ? '' : 'none';
+        onIcon2.style.display = video2.muted ? 'none' : '';
+        btn2.setAttribute('aria-label', video2.muted ? 'Unmute video' : 'Mute video');
+      });
+    }
   })();
 </script>
 
@@ -1517,4 +1758,3 @@
 
 </body>
 </html>
-<!-- Preview build 1780031682 -->
